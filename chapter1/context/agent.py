@@ -40,7 +40,7 @@ HIDDEN_RESULT_MARKER = "[Tool result hidden due to context mode]"
 HIDDEN_RESULT_EMPTY = ""
 HIDDEN_RESULT_STYLES = {"marker": HIDDEN_RESULT_MARKER, "empty": HIDDEN_RESULT_EMPTY}
 
-
+#五种实验模式
 class ContextMode(Enum):
     """Different context modes for ablation studies"""
     FULL = "full"  # Complete context with all components
@@ -137,7 +137,7 @@ class ToolRegistry:
         except Exception as e:
             logger.error(f"Error parsing PDF: {str(e)}")
             return {"error": str(e)}
-    
+    #读取代码里的固定汇率表。这样不同实验模式面对的是同一组数据，不会因为市场汇率变化影响对照结果。
     @staticmethod
     def convert_currency(amount: float, from_currency: str, to_currency: str) -> Dict[str, Any]:
         """
@@ -451,7 +451,7 @@ Your task is to solve the given problems using the available tools. Think step b
 Important: When you have gathered all necessary information and computed the final answer, clearly state "FINAL ANSWER:" followed by your answer."""
             }
         ]
-    
+    #这里不是工具的真实实现，而是模型能看到的“工具说明书
     def _get_tools_description(self) -> List[Dict[str, Any]]:
         """Get tool descriptions for the model"""
         return [
@@ -658,7 +658,7 @@ Important: When you have gathered all necessary information and computed the fin
             return {"error": f"Unknown tool: {tool_name}"}
 
         return tool_map[tool_name](**arguments)
-
+    #这个函数决定每次请求实际发送哪些消息,上下文
     def _prepare_messages_for_api(self) -> List[Dict[str, Any]]:
         """
         Build the message list actually sent to the model for the current
@@ -699,7 +699,7 @@ Important: When you have gathered all necessary information and computed the fin
         if not content or "FINAL ANSWER:" not in content:
             return None
         return content.split("FINAL ANSWER:", 1)[1].strip()
-
+    ########ReAct 主循环
     def execute_task(self, task: str, max_iterations: Optional[int] = None) -> Dict[str, Any]:
         """
         Execute a task using available tools (ReAct loop).
@@ -771,7 +771,7 @@ Important: When you have gathered all necessary information and computed the fin
                 # DeepSeek V4: enable thinking so reasoning_content is present
                 # for the no_reasoning ablation (parity with thinking defaults of
                 # Doubao/Kimi). Skip when routed via OpenRouter, which may not
-                # accept the same extra body shape.
+                # accept the same extra body shape.调用模型
                 create_kwargs = {
                     "model": self.model,
                     "messages": api_messages,
@@ -787,7 +787,7 @@ Important: When you have gathered all necessary information and computed the fin
 
                 logger.info(f"Sending request to {self.provider} API")
 
-                # Call the model with tools
+                # Call the model with tools解析工具参数
                 response = self.client.chat.completions.create(**create_kwargs)
 
                 response_dict = (
@@ -819,7 +819,7 @@ Important: When you have gathered all necessary information and computed the fin
                 # A normal chat turn ("hi" -> "Hello!") or a task answer without
                 # the FINAL ANSWER: marker must end the ReAct loop. Previously
                 # only "FINAL ANSWER:" broke the loop, so plain replies were
-                # re-sent for up to max_iterations (wasted API calls).
+                # re-sent for up to max_iterations (wasted API calls).检查tool call
                 if not has_tool_calls:
                     assistant_msg = self._prepare_assistant_message(message)
                     messages.append(assistant_msg)
@@ -864,12 +864,12 @@ Important: When you have gathered all necessary information and computed the fin
                             "content": json.dumps({"error": err}),
                         })
                         continue
-
+                    ##执行工具
                     logger.info(f"Executing tool: {function_name} with args: {function_args}")
 
                     result = self._execute_tool(function_name, function_args)
 
-                    tool_call_record = ToolCall(
+                    tool_call_record = ToolCall( ###追加结果，observation
                         tool_name=function_name,
                         arguments=function_args,
                         result=result
@@ -894,7 +894,7 @@ Important: When you have gathered all necessary information and computed the fin
                         }
                     messages.append(tool_msg)
 
-                # If the same turn also tagged FINAL ANSWER: (unusual with tools),
+                # 最终结果If the same turn also tagged FINAL ANSWER: (unusual with tools),
                 # still prefer extracting it after tools are recorded.
                 if message.content and "FINAL ANSWER:" in message.content:
                     final_answer = self._extract_final_answer(message.content)

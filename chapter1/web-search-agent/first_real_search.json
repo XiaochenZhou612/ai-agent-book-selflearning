@@ -1,0 +1,364 @@
+{
+  "question": "2024年诺贝尔物理学奖得主是谁？请搜索并给出来源。",
+  "trace": [
+    {
+      "iteration": 1,
+      "type": "thought",
+      "content": "用户问2024年诺贝尔物理学奖得主，需要搜索并给出来源。我需要调用web_search。这是事实问题，答案已知：John J. Hopfield 和 Geoffrey E. Hinton，表彰通过人工神经网络实现机器学习的基础性发现和发明。但用户明确要求搜索并来源，所以必须搜索。可以一次搜索官方Nobel Prize。使用精准关键词。然后综合回答，引用来源。工具只返回结果，我需要根据结果。先搜索。"
+    },
+    {
+      "iteration": 1,
+      "type": "action",
+      "tool": "web_search",
+      "args": {
+        "query": "Nobel Prize in Physics 2024 laureates official NobelPrize.org Hopfield Hinton",
+        "classes": [
+          "all"
+        ]
+      }
+    },
+    {
+      "iteration": 1,
+      "type": "observation",
+      "tool": "web_search",
+      "content": "----MOONSHOT ENCRYPTED BEGIN----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----MOONSHOT ENCRYPTED END----"
+    },
+    {
+      "iteration": 2,
+      "type": "thought",
+      "content": "Need answer in Chinese. We have official sources. Need concise but include sources. Mention awarded jointly to John J. Hopfield and Geoffrey Hinton, citation: for foundational discoveries and inventions that enable machine learning with artificial neural networks. Could add brief contributions: Hopfield associative memory network; Hinton Boltzmann machine/backprop? Careful: Nobel popular info says Hinton invented method independently discover properties in data (Boltzmann machine). Include sources with URLs: NobelPrize.org summary and popular info, Reuters. The user requested search and sources. We used search; final should cite. No need more. Ensure source dates: Official Nobel summary. Reuters Oct 8 2024. Need maybe note announced Oct 8 2024 by Royal Swedish Academy. Provide structured answer. Include Chinese names maybe 约翰·J·霍普菲尔德 and 杰弗里·辛顿. Note prize share 1/2 each. Done."
+    },
+    {
+      "iteration": 2,
+      "type": "answer",
+      "content": "2024年诺贝尔物理学奖由 **约翰·J·霍普菲尔德（John J. Hopfield）** 与 **杰弗里·辛顿（Geoffrey Hinton）** 共同获得，奖金各占 **1/2**。\n\n获奖理由（官方引文）：**“for foundational discoveries and inventions that enable machine learning with artificial neural networks”**，即表彰他们“奠定基于人工神经网络实现机器学习的基础性发现与发明”。\n\n简要说明：诺贝尔奖官网称，霍普菲尔德创建了可存储并重建信息的结构；辛顿发明了可自主发现数据属性的方法，这对当今大型人工神经网络至关重要。\n\n来源：  \n- NobelPrize.org 官方页面：The Nobel Prize in Physics 2024 — https://www.nobelprize.org/prizes/physics/2024/summary/  \n- NobelPrize.org 科普背景：They used physics to find patterns in information — https://www.nobelprize.org/prizes/physics/2024/popular-information/  \n- Reuters 报道（2024-10-08）：Nobel physics prize 2024 won by AI pioneers John Hopfield and Geoffrey Hinton — https://www.reuters.com/science/hopfield-hinton-win-2024-nobel-prize-physics-2024-10-08/"
+    }
+  ],
+  "answer": "2024年诺贝尔物理学奖由 **约翰·J·霍普菲尔德（John J. Hopfield）** 与 **杰弗里·辛顿（Geoffrey Hinton）** 共同获得，奖金各占 **1/2**。\n\n获奖理由（官方引文）：**“for foundational discoveries and inventions that enable machine learning with artificial neural networks”**，即表彰他们“奠定基于人工神经网络实现机器学习的基础性发现与发明”。\n\n简要说明：诺贝尔奖官网称，霍普菲尔德创建了可存储并重建信息的结构；辛顿发明了可自主发现数据属性的方法，这对当今大型人工神经网络至关重要。\n\n来源：  \n- NobelPrize.org 官方页面：The Nobel Prize in Physics 2024 — https://www.nobelprize.org/prizes/physics/2024/summary/  \n- NobelPrize.org 科普背景：They used physics to find patterns in information — https://www.nobelprize.org/prizes/physics/2024/popular-information/  \n- Reuters 报道（2024-10-08）：Nobel physics prize 2024 won by AI pioneers John Hopfield and Geoffrey Hinton — https://www.reuters.com/science/hopfield-hinton-win-2024-nobel-prize-physics-2024-10-08/",
+  "api_turns": [
+    {
+      "kind": "formula_tools",
+      "formula_uri": "moonshot/web-search:latest",
+      "request": {
+        "method": "GET",
+        "url": "https://api.moonshot.cn/v1/formulas/moonshot/web-search:latest/tools"
+      },
+      "http_status": 200,
+      "response": {
+        "object": "list",
+        "tools": [
+          {
+            "function": {
+              "name": "web_search",
+              "description": "用于信息检索的网络搜索",
+              "parameters": {
+                "properties": {
+                  "classes": {
+                    "description": "要关注的搜索领域。如果未指定，则默认为 'all'。",
+                    "items": {
+                      "enum": [
+                        "all",
+                        "academic",
+                        "social",
+                        "library",
+                        "finance",
+                        "code",
+                        "ecommerce",
+                        "medical"
+                      ],
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "query": {
+                    "description": "要搜索的内容",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "query"
+                ],
+                "type": "object"
+              }
+            },
+            "type": "function"
+          }
+        ]
+      },
+      "elapsed_seconds": 2.816094
+    },
+    {
+      "kind": "chat_completion",
+      "request": {
+        "model": "kimi-k3",
+        "messages": [
+          {
+            "role": "system",
+            "content": "你是 Kimi，一个智能搜索助手。\n\n请按照以下步骤处理：\n1. 分析用户问题，识别关键信息需求\n2. 使用 web_search 官方工具搜索相关信息\n3. 如果需要更多信息，可以多次调用搜索工具\n4. 综合所有信息，生成准确、全面的答案\n\n注意：\n- 搜索时使用精准的关键词\n- 优先获取最新、最权威的信息\n- 答案要结构清晰，有理有据\n"
+          },
+          {
+            "role": "user",
+            "content": "2024年诺贝尔物理学奖得主是谁？请搜索并给出来源。"
+          }
+        ],
+        "temperature": 1,
+        "max_tokens": 32768,
+        "reasoning_effort": "max",
+        "tools": [
+          {
+            "function": {
+              "name": "web_search",
+              "description": "用于信息检索的网络搜索",
+              "parameters": {
+                "properties": {
+                  "classes": {
+                    "description": "要关注的搜索领域。如果未指定，则默认为 'all'。",
+                    "items": {
+                      "enum": [
+                        "all",
+                        "academic",
+                        "social",
+                        "library",
+                        "finance",
+                        "code",
+                        "ecommerce",
+                        "medical"
+                      ],
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "query": {
+                    "description": "要搜索的内容",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "query"
+                ],
+                "type": "object"
+              }
+            },
+            "type": "function"
+          }
+        ]
+      },
+      "response": {
+        "id": "chatcmpl-6aa94af9233bb2d03df5198e",
+        "choices": [
+          {
+            "finish_reason": "tool_calls",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "",
+              "refusal": null,
+              "role": "assistant",
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "tool_calls": [
+                {
+                  "id": "web_search_0_707d6ab8",
+                  "function": {
+                    "arguments": "{\"query\":\"Nobel Prize in Physics 2024 laureates official NobelPrize.org Hopfield Hinton\",\"classes\":[\"all\"]}",
+                    "name": "web_search"
+                  },
+                  "type": "function",
+                  "index": 0
+                }
+              ],
+              "reasoning_content": "用户问2024年诺贝尔物理学奖得主，需要搜索并给出来源。我需要调用web_search。这是事实问题，答案已知：John J. Hopfield 和 Geoffrey E. Hinton，表彰通过人工神经网络实现机器学习的基础性发现和发明。但用户明确要求搜索并来源，所以必须搜索。可以一次搜索官方Nobel Prize。使用精准关键词。然后综合回答，引用来源。工具只返回结果，我需要根据结果。先搜索。"
+            }
+          }
+        ],
+        "created": 1789479677,
+        "model": "kimi-k3",
+        "object": "chat.completion",
+        "metadata": null,
+        "moderation": null,
+        "service_tier": null,
+        "system_fingerprint": null,
+        "usage": {
+          "completion_tokens": 183,
+          "prompt_tokens": 338,
+          "total_tokens": 521,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 97,
+            "rejected_prediction_tokens": null,
+            "text_tokens": null
+          },
+          "prompt_tokens_details": null
+        }
+      },
+      "elapsed_seconds": 24.326541
+    },
+    {
+      "kind": "formula_fiber",
+      "formula_uri": "moonshot/web-search:latest",
+      "request": {
+        "method": "POST",
+        "url": "https://api.moonshot.cn/v1/formulas/moonshot/web-search:latest/fibers",
+        "body": {
+          "name": "web_search",
+          "arguments": "{\"query\":\"Nobel Prize in Physics 2024 laureates official NobelPrize.org Hopfield Hinton\",\"classes\":[\"all\"]}"
+        }
+      },
+      "http_status": 200,
+      "response": {
+        "id": "fiber-fcnnp4faqfwi151amkbi",
+        "object": "fiber",
+        "created_at": 1789479689,
+        "lambda_id": "lambda-f3w8y6j3unb1158cq1h1",
+        "status": "succeeded",
+        "context": {
+          "input": "{\"name\":\"web_search\",\"arguments\":\"{\\\"query\\\":\\\"Nobel Prize in Physics 2024 laureates official NobelPrize.org Hopfield Hinton\\\",\\\"classes\\\":[\\\"all\\\"]}\"}",
+          "encrypted_output": "----MOONSHOT ENCRYPTED BEGIN----FfEvrRyG/Ot74//8snCj4BF4ehIwIRhV4JRpIOsDt39PZg6DACOUvwCfEJcaW9NWvyeKp16RTkp8HKFDZUAhN+8cFx9MPSbWRQt1YSr8mR36VqPHy7SPMJ29PDdx4fu3TgfLkgRj9d8BLL0xY0UqJNQRKAV28Q2RJ41pMJyCFRolJLKXdMbfrycbNoEr+ZVro2scmFL8+X+jASdcNmxE+c5MHFk4ItJjMlNovOj3/poBuKZt6mQgV1fHgfxKPC7MhAj3FhvKRJlG/XwE03/V6OPYiy3iFjdmqHHvoDPa8LDtK8SeckYG4sT87su0fMmngFr8FAIfpnk8jbpwGmSihFCF4w+AgqpwNey0jMRbdEW+NfxywJyJpDopq4NKivjwxydYbj/XfoAeMjTCfOxYLYCKouXEdOFNi/yswEaDs9UMYeIJxMY30oGK2M+Ad3F5X8z8CpyM5QtEAJRblWN2YpDNH2lBQizK1opOo6md4Au6SEt8Xb3qUxkA07Lb4qnhcmGXgoZEgn6NE3bKvSgpP3c22/mpiRY02D4xSWaxD3VZXko6tBXprA3YR1vAfEQZ1CoKdYepyyKCmwUqlN4oUtXepTf0/D2KzL/R3s4U1UTkCmrpT+3obFcrsUzxTM1VGHwsTd0OflqRa4C3ehKhs3xvvdI6MlOgs8UcBDueZZ9Fluza+PIsPWSpA3eaKUj/mD6g/2IQHgOJHGIPL326RAQ3encsO2DFOcEOVLduLIu7e7mgjjnSkGOnX9fYs3KgtNGy8GErsjpqRqG1rj633ngoCjkYzpd5n2TbV/JbTPvBfASKYv9MySig8FCA5tQZb4XQ/EDFJGFJn0e8ZtRMrqhHM1Zu+zP6HHDcCQYLY73OAetkZzipEaIRi2PSZELYAjhFEcch0AMY+/sscZy+2YrMX6qfQyq0zjjpKI4n5vCuZblcAeyBEQ15qbuDGyNXr0BrjlZ80Aen6NmFNytEFCLyltlvr+Om8odOWt5er38OON/ZkVUtXpb/GciTreWIrUkv1pBDHVzqiQKkqbH1+11IxohJRtEnU3osqrBWi7CLaLzSNxHr2ZO9uLlSDoSqTCWR828UBc7qHXyGqb+xoLKMMR1rZAOD81pELrqjMOLIlgpwZ2X54luhcsWWlKWOizpfrw2Jya5mQvGOw+BWIbi0BXbAkblKPjeXsL9lOW17o7jv8MaJdHuwuIY2Nzk8AO8z6fkxrYGcDs1VElgwU3ToxyBZwst/ml3t1jNIp3quuTBh6L3DbaUKmGaozTThtLGrmsYIYSHav+uTyQmdhxIePXE8HdPYMpu1qe7/Aix/XHJAUhMHn0ylQ3yFYKV+h2OPdcXUVvrQVhEr4VFPbgnb07LpJiw9/IGx1vPqf9OESZSTVosWoCqSrMPra4LHxmey+vwTHrDpLgVk+uro6Z3NuFxI5o1gWQcwWXIMSb+4tbczFJYgSd1lsYKAeFmyV/nph1od5tRk+V/usxkfz1T4Cf9LZWFkGMByEaKs5peP4vfrNdjZJoF01CC+Z/jb3zDn4LFMWKGQEAPUYwGQaYBN7FW15tlqmax9FCScZdXklZ+88oTERIzvbAsvlYNwwQqK0m5hIgYzySmLXBCeoGNOCQLpsvBotuGykTEHLVkhJoNR5XmDsGOMoZo9ILp66fZ+o4pBJOryUcTGzmSqC19ijYd6FMjEX1frqPdJEsdrSaIKHzf1oUroioeJwT0njZ59HcXtGkn/y0kLT2lJOYl7TDWeC4Qr0aLY3z8JKH9Lkj//o60eZFtCNd7OcLEkPEb7Nt6YBAUgaPTKCcoqxjpwBj1T9bKaqIjV0wpUy2e5ZHA8WiM65xy+UGtlGMkXfu4S0peZ5aXpyd4Gn/KwbOLbLjTQBgZT5LOmxbdmlLOs7LqFFwS1TO6PL2blHGBUhGIJsoC+9v4nhCSoA70RkOvH51u2frjO7FJvk2OIYmdgfw6id9GlwrHPysGgg7pl+wQq/GSA0h3MD5zj5FhZDeXRWGy189f91Xgr5iwk6UoJXTaJ836CZbZjdI4FDSPhxLU1mhq+wFINzucVWi0zD9Yj01y1ITPH6QSYn19/ekHnJDhwK5exROTE8p8M1N3dKQ5UgJvdioIkBaclMm+U0lriBqN6P6ECVSp5+96BCpOUI3zVc0eNrK3noQkbjhSL79O7FsJ2pvgq1q1bKzODrkQaZhtmyxnMCgCYYLwYFf/DQb2nSOf2Su3SDbUbSvc9fkDClXM5nkqKMuMag2z9IzEIjCHAz1HNhAqFvlcVSTA6cd7np+LQ5lXeffuqQN5URADTG2ycaMuyZhsph4wIr3KbSKYO/HxTZ0N57GS+WrC6+cwGbdWkwpCC+4H7xKb/4zJ4P7OhdiX9eWlLSddpJ2mdtD+kVfqmPQwOT3M0/EZbPWbp2DzHuXOo9GFWk2TTNLZRUFOTnoJQDScl51CkqcQIGyUXwTjZO5MuAFCHyF7rPgLAEBr/eHDmGLA1okqwYFaYjcodODppnhaLrcHEhttbe2ph7VytCAZ+UDWarCpSjK1Ma5JkSCzCBxedJqgFwC5N6UGnh0VhLbH41QobJvSYRGx9+2NxZN141wKIjxWRmxWCzuHzTq0Lv7spn1/0ICSYhekyTQ6j+a9snw3POGeJcB/BOHUUj8RvvSJXq41k4Oyq0ICeoMRU1IkyzYYosIwVbaFlNkR9VUBWnrR9+h9mLgCiS5wRJmKk6KO2aiF6FUQWFoeUz1AcF5F+Q/iQIhb2oqIVY+yprvmrm6CJjBrMZFG+paHk/ttQbJLnzu59Lu1pQJUBKj/yYqyVOV+49Mnap5LSvTrvQ2cTLMeAkkAY2H/88C4XNzRvx0HWp5mJGpChpNbko2nsZgUJRuyjvW8aI1vY0KAwyPIqLazKLKmTUhp/JN9Y1Khp5EMFxepNFeFk1R5yJ1bJ54Ej1VowYxekP2rPEjxuS7XnCr5W6Js2KO8xQ845dA6r8PQpXC00vIZhoz5zCaqTDdGoyKJmmc5jZt+Qm4uRBWheBV7QRKprdFZVtOZTlf5LIsZtVcupiz2Ls9eZUw8HPu8WK1V02T/VBTkgtXm3694KvuJjiZ974p3vVJ2ogHpOgRMegp++/s8OhTE7U2PsLNiStoQ16yHxPMT4/+n5vaOmrGe6/8Wih45iElS0SHQO3Wdq9D+vbocWeS1NusDcjrL46fwo5oHSlISbnnX7+6lq3oOFjYlzNbBfo964Jdg3YW1Vo8U2V7Mxy/wg92plQnM0+IX++DGXukdpWytYW2NVL7yuu61qSJDasElDruuwJmSDMszl++9DoKHp5sCyVmJ+x6U/phmciUnNjFd2+IxWCIetLMEP2DKR1r3ToeQSh/OxIvTDkl+dxwh1/Re02W6HghlEmc2uKqz8s6rKrS8suHV7ieiQWNTfKIg7tjkm/wtx/WNBQNkcHsOs7BEwVapbkikDYdW7YiZOYFN2uZA3CyiLpMFe+n/QpyCeRsCaXitcj7S8ayVWvi5hnyePMCQz9dYesFCKLS8I59F375DvArDv0LarRgBA+bvICKBK3TrCLFQaweKolAqCf6nD8Xz4MXwxTDTupVHG9/9kpR+f+Wr4Kk9B3D+dcCHeU+uC3d+xCNrHYNeTybP44HOTzD1790f+uRpxL6x5yU4janRg21oXVbGlDT6mnTGUnNrkjBgUSpQhI6wj+rE52LKk6AwYGJxycQiIajdT6dSI3OUxg8T1EMwahe9khcrKaQFt7x7BeHxmNyPX0UULIr2sxUqZZAwACAVBX8WZurYZWgaxgqt4jwsEa4FQlmD0yk23EHvPe5QjtGMPvaKaEWvo/hsrEu/2uJ0JkR08EKXeJwDQfoUivawLt/+MUmmIAHxb1MdC1FaV0cJ6IlORSG8SvIU8kbfrBTwHU5qFv7ViFOC72I/vX0dkZ00s4YuWCeceogbeS1gC35JOHwqBKMMjOs/n8pi019LJLqHfNJu9GrrqIPSs/2JgeZSFVYwbp7HFvdMmJH74zKX1Zi9rVlxRw7BSJhrCtrvgbAky2jJ1Ftzq83/3U/SMvrrr2E+wFJmVLH45Z2FfcI+/fAL/FxE7ChscojI+nzzLPF9/ftF4Yg/Z/FeroNse6liGHoaFl0/Lm+xPBUis+1CtA915QUV5FMe05i5bCcqy7CyEQ4FRqMH0N+YJmweNjDKNWHZ6U/RNA3YsWJ41RsYwyyS6ViR8cl86Em/Wzj3V3tH7xjWVMUcLBwadYUb0WIw3YY80M/q3w6AusltkKowIeK+O9ybjFsSQ1JYMnbfJ+FP1/zeMnSZJZix3DjEIRPaxBpPUTjhskfxc9N4YMHjT39lX3+JHSAtEyn85mCuqkIldTaYXuCL+DWyUUieXRhioGfy3/FuZeDPKvid49p0HXBpL7E6Mue3hBk1RBzCx5UtYk6Z9nQ9UZhXVNznOgV+wXXQItZpUEP1YzZyNolAI+HBzzlB15aohGgWLNWVWjtcuAW4sBOQ85D/64o/d2Ryyyxzs2CDbO78yKMkSFyd13XIY19iGXT5S4TbTnHq5X2o6VV07WXjgBhTSVDCoHp/eoMtILp7flZ8u73WiOKm99ofd5+bJX/KBttwON0DYNHCjns6N9PEC0tm6GEyfKkmXTt4G3A8UeOH3df/qgFn6VTL5BYwBv7pNaxdzKTBI/mLYq6uEcPUUlhsnMVvQXdH25djvfC4+gc4JAaZmtppoR4F1nQbCvD1SuCsnXijaBVQ01H8kjUZiY7vcW/AMM2f19iANUh1vtgs1muDnK1L6dq+Zw1MkVmUsloizwE/JbjNvU+bU+ZYJLGFuc6jfT865ye2tZ5vwrEqwEugXFDJn+vW51e8aXSGtkMdadnPMGxP/0h8wR9Z3kOQi+Z7QLkocs3tYBuvRzE4KorXX/oVGJ0lViMQf4v+5l0KYc0Vb3UUX5l8DSv2SvoAok5ttZc9AafCG/7v6wOz/AOjI/Mdvcb1UFpuxr32Dhx1cCt3mAkDG0mmVUnMdp88/OyUCBC6DyPPXXQt6u85Y2/KDqQyk8609oXq9Wq9u+FWZfMUw+p4hp7iGurXvg/3tPHHXQeSdRIaazjWQ+pouWj8VlogYJZU8kfifLSEFlMUiWPqHsb0GpNkgbL9OoqajJZfUTLOu4F3aa2NyMpJos4yA4kssdkFw5VmW1RZnYW3Tvq/ENRbU1e5PZv7yRMhJTDoTBLr56xH1KKsQTKYSbfaB13xlWvGS3DmJGWSAKuQcmnBjhSSaOxLmIoPrQrYwBei99oT70ZWIDK9Y73ftq11B5rhubk/iHItB6b/c1MIP8suGdpnbRrhBvgVWeGTMjWYShnh1t/q/nqnLaPUjzBk1wHMaV3El9hZFAxz+IvKTOhyEJTe5aRyuNt2QFCwPtoJL1UAAlovYgZ3uBwAhyF92YLD9ZZg0CMAOcM3IEywLpA3/UwkWa5x3xwxJTk3IqVYWzGkQYiU3LuGjfP47s1YbQ5jBR5Yj6CHO2K1puwDR3AMXdTNVMCbDMTwP8yEnaGDjwjSWXwc5ELK2LB2cThg3455WiuPFZLJvs8RFK+Q3vujobHLCVMpAMnQ4wbCQ7h2jHnvrFPR0txtG6lm8FAkk01u37uoV4gUrEbrtX8i80Cp13IEOSeD3EuZ/CzIWCQ61KDLmZOtYXyW+xWjWFFZsnqd29LsliglC9y6DDlRd666mG4f6C6cwXlaiWzbiSvn77gLQpNoox1U3sZCXzXVHh/PI3c1G4gl7uSZzpqr+xr78GUuBcGemHcIsb75oZGi6YVHNOUIQIaiM/xX0dmW5dMDOF5j1b0YuYeeNeOKpTghghzKxsHdFZRNgTDvWCr1vs1yqz/4PG+qZDiR0bchC9z//FuyIFSlZEycghm1RXaxS3eAWuOnMb8oYAq2jIv9IHLlikUWxUNEp1GonlszdfMLpf8hKKevMqdM9KW9xbWWKjUju0OJK6cBsE+ys/OlbhVRpjtSyuMGhZO9unhopetFyIYBCMW7XrCcFZ+0Hjgr0hHU5/e3k3q5Thk5FdQ/fxLGCkIW6MAtNqz/oSzKvubwEDtvQ6hVxIflBNL70VcIQ0GlFH9zaEXJmgdAAarGbYSdh6fYBVMvTF4VxJ6u7DfHwItA6qzZkrg4HsnKCZfzl0HzkGNUX8U+5CrKydhsiDf8odGr/zfnI7FE5MgErP6qrxwVmswzR6dpNfxmbzv8r55F5HpaBc2SqRLrVgNfUWPqcFTlucTt8BedtZrqjKvbCKysptwCxnhZnKgUAi29p8eyM0VZK5iBpbWoP1L+9JcBDJkWw7Qz/22IVYaU4UxqhkAHpB9sNf+zzNmsWQxD8Q2k5XMmOZdvbLKuinybK47kRKGQ9tRfBGvsQNJPaMmOT9pJFYnCH0UeybgpvY0LHXuT4JoKFw4Atnb7TzmwM9W/oK4qYOoklspQe52SdameV8HVrpRIaE3ythcrPZmMvqgA6fe9i/9I1kr8T751VoBQjglWllQ/aBYdUgro+efNhtgYO+1x/6unHmZ/OKvfWhFiy7xtJOIaO8TkLDVlejnVN96uqWaDTExrvUyKlooXQk+WEacOPoqNJGyZOYWpr+zM28cHN9fcW0b9iM++kLBgDazIPV4D3Lbn/GH3SGMUd0hr0cIAyRK0op/uit53h6Gi+sK0T3BtSToMyRBVLF+bTc494s5vjCFT8p3l3We0TTuTcGuZS4IfARug82iHjymGCHKmQmyA+sCswkRZ+WWDCJI+xb8OnlchshBRLxY9vMk3jl5CjhbKHqGdvzNd5XsIscfgjucw9y1H47tPv8WDH6oocpiYCNZlC6PClqTcuSViBa8WTwjab44kTryV4b6xuYCDDjSieMvHeKqNky3mPthisxRhG61Uhtifr+KfCeiZNkhVNRuDaTXK1jCzO6FisK5EjwmvI8043j7f6Fucwhk2w/gKPomnYA+/kdFkKqGE8upkhpJTn5/AcRLBPXGy+A9bhESFie4FdYFqsZuocrROuRvvrhj9iEWrgnJOVjV4U5IeHoBfoMs/bugCWmb2IOA0mUCDBA4bV5NUN1yRa/QcAM0VSYHgyWfYLSRg8wV8zL/Fl35cOBK1wg9Hvyn4oWhwdVedn4Io/MB5XIPgs26pWfdoE7+qvenFS60gmJshVs8+FudgcZh8D6caudNjmoahTlC9J2COvtU6b8vy9pl80Xv49tpn5F5Jxb8pI719qFiWnaz+Ka6AADoz7JsyilxGrPFWvxQPdzSepJo41BLNB//Z/pGiSHpKzWHl1NO2ZZNmmppo6o7KzacHJVA1hI+Nt9c7MhV5z1TVeonMA+qVNmiMjydukMFV5CWnnbeYzToKDBIzUBrL0NOPCCxFAJDFbOPY/Kn6jv8R5/Y7GSuOrE3EnGQiD9Eu6DMrtrhOotlGY5F+UepCQPRIzB/5jVV1ibC3VcZ0igr2Xp/TC3gXaNUsZAM1Qk8KNJrEiUmazy2ba6APFQu1edYId6iEWkEvuCjERuR6GIL+D9ztK6oHajx+OtPnM1rF6F+CFVXDqzZZeZUKM9Wir/P2BZc6ltpGqFmMhuAmTt7EzV5csK2K3oKNLP5mq+o/HrOU9BubcBtUFGiJh0o4zWJY6DV6v0hvS8aLJRYLY3jDNsKBhhrfsfsiy1IO8i+nr+fTeM7w+fTMvrfNovJtglGr5ptpzntCp+2LdXgCYnCYfFbc4SgtYFNE5hLqIVhG6nxRJx2khE5m76VRMnbAK2gVbB4RklrNbaBlY+RWHtOI7ZEy6Oo4VpQjAyzkQOR0+XWNLkFWWFcVODD5kPngZyUdy2d2jcqzmZnIItXBVmoTS8ocS/ro4/489vkVFHEFVZBRgvXzrnKxLPR4zuasOCXyEAeonoh18MXX3rxcoMXoDprnie/VQp+wrH8ykjKtCR0C7zuAeblqU4h/ZCa4AlRiMB8hlG7qZxmQ0rHyb9sSJL4OhlHQp/WXcnqb4S3gP9ndWBte9faOJrY3vkYTY9N6HqoFGmVLNxHCOYb5EH1V4UAFVF75O08apeH/NVYif/m8nTd3Gq2R8OeZ7px92zMDxAdVrMognyYjmCoiUbTbv5pgEIiFTduN2wKOmsqyYqJHO30CmyMKxhbVvs5qtcVWIZNbb2s4dUQE2c6UYBevssfyiVmG4Ikhk9/08BLLmmTwECr6Fdc/fvSYUzq5vQc2rBB5TDVgkGhS4cX0hV/qFKKSRrQRUpQfjQD+fGNaNBNqzG7r6wkBqqy8VCUuI2/HWfv9cZa1r33PhTQPpIaBi7INvbJrF8G0/oFn47G7fsvEs1v8te0hqsbDLXcv8nBZNFJbDZtfc8CjA9QXojbvjQR6M8HGwCBFUyMeZoJOAT7AmvlAhZ8KGQa0nwkAAiSE+XfzBLrTr6vSEnJkNIw==----MOONSHOT ENCRYPTED END----",
+          "references": {
+            "tool_call": {
+              "type": "function",
+              "function": {
+                "name": "web_search",
+                "arguments": "{\"query\":\"Nobel Prize in Physics 2024 laureates official NobelPrize.org Hopfield Hinton\",\"classes\":[\"all\"]}"
+              }
+            }
+          }
+        },
+        "formula": "moonshot/web-search:latest",
+        "organization_id": "org-4e318c42231f41d5a5672cce591fac63",
+        "project_id": "proj-b65d867d18bb4fbe8932a5c228902190",
+        "access_token_id": "ak-fcnnk4m39dd111a7obhi"
+      },
+      "elapsed_seconds": 10.599647
+    },
+    {
+      "kind": "chat_completion",
+      "request": {
+        "model": "kimi-k3",
+        "messages": [
+          {
+            "role": "system",
+            "content": "你是 Kimi，一个智能搜索助手。\n\n请按照以下步骤处理：\n1. 分析用户问题，识别关键信息需求\n2. 使用 web_search 官方工具搜索相关信息\n3. 如果需要更多信息，可以多次调用搜索工具\n4. 综合所有信息，生成准确、全面的答案\n\n注意：\n- 搜索时使用精准的关键词\n- 优先获取最新、最权威的信息\n- 答案要结构清晰，有理有据\n"
+          },
+          {
+            "role": "user",
+            "content": "2024年诺贝尔物理学奖得主是谁？请搜索并给出来源。"
+          },
+          {
+            "role": "assistant",
+            "content": "",
+            "tool_calls": [
+              {
+                "id": "web_search_0_707d6ab8",
+                "type": "function",
+                "function": {
+                  "name": "web_search",
+                  "arguments": "{\"query\":\"Nobel Prize in Physics 2024 laureates official NobelPrize.org Hopfield Hinton\",\"classes\":[\"all\"]}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "web_search_0_707d6ab8",
+            "content": "----MOONSHOT ENCRYPTED BEGIN----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----MOONSHOT ENCRYPTED END----"
+          }
+        ],
+        "temperature": 1,
+        "max_tokens": 32768,
+        "reasoning_effort": "max",
+        "tools": [
+          {
+            "function": {
+              "name": "web_search",
+              "description": "用于信息检索的网络搜索",
+              "parameters": {
+                "properties": {
+                  "classes": {
+                    "description": "要关注的搜索领域。如果未指定，则默认为 'all'。",
+                    "items": {
+                      "enum": [
+                        "all",
+                        "academic",
+                        "social",
+                        "library",
+                        "finance",
+                        "code",
+                        "ecommerce",
+                        "medical"
+                      ],
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "query": {
+                    "description": "要搜索的内容",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "query"
+                ],
+                "type": "object"
+              }
+            },
+            "type": "function"
+          }
+        ]
+      },
+      "response": {
+        "id": "chatcmpl-6aa94b13e5de975f92ffeaff",
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "2024年诺贝尔物理学奖由 **约翰·J·霍普菲尔德（John J. Hopfield）** 与 **杰弗里·辛顿（Geoffrey Hinton）** 共同获得，奖金各占 **1/2**。\n\n获奖理由（官方引文）：**“for foundational discoveries and inventions that enable machine learning with artificial neural networks”**，即表彰他们“奠定基于人工神经网络实现机器学习的基础性发现与发明”。\n\n简要说明：诺贝尔奖官网称，霍普菲尔德创建了可存储并重建信息的结构；辛顿发明了可自主发现数据属性的方法，这对当今大型人工神经网络至关重要。\n\n来源：  \n- NobelPrize.org 官方页面：The Nobel Prize in Physics 2024 — https://www.nobelprize.org/prizes/physics/2024/summary/  \n- NobelPrize.org 科普背景：They used physics to find patterns in information — https://www.nobelprize.org/prizes/physics/2024/popular-information/  \n- Reuters 报道（2024-10-08）：Nobel physics prize 2024 won by AI pioneers John Hopfield and Geoffrey Hinton — https://www.reuters.com/science/hopfield-hinton-win-2024-nobel-prize-physics-2024-10-08/",
+              "refusal": null,
+              "role": "assistant",
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "tool_calls": null,
+              "reasoning_content": "Need answer in Chinese. We have official sources. Need concise but include sources. Mention awarded jointly to John J. Hopfield and Geoffrey Hinton, citation: for foundational discoveries and inventions that enable machine learning with artificial neural networks. Could add brief contributions: Hopfield associative memory network; Hinton Boltzmann machine/backprop? Careful: Nobel popular info says Hinton invented method independently discover properties in data (Boltzmann machine). Include sources with URLs: NobelPrize.org summary and popular info, Reuters. The user requested search and sources. We used search; final should cite. No need more. Ensure source dates: Official Nobel summary. Reuters Oct 8 2024. Need maybe note announced Oct 8 2024 by Royal Swedish Academy. Provide structured answer. Include Chinese names maybe 约翰·J·霍普菲尔德 and 杰弗里·辛顿. Note prize share 1/2 each. Done."
+            }
+          }
+        ],
+        "created": 1789479700,
+        "model": "kimi-k3",
+        "object": "chat.completion",
+        "metadata": null,
+        "moderation": null,
+        "service_tier": null,
+        "system_fingerprint": null,
+        "usage": {
+          "completion_tokens": 477,
+          "prompt_tokens": 1948,
+          "total_tokens": 2425,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 191,
+            "rejected_prediction_tokens": null,
+            "text_tokens": null
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 256,
+            "image_tokens": null,
+            "text_tokens": null
+          },
+          "cached_tokens": 256
+        }
+      },
+      "elapsed_seconds": 19.496516
+    }
+  ],
+  "provider": "moonshot",
+  "model": "kimi-k3",
+  "base_url": "https://api.moonshot.cn/v1"
+}

@@ -21,7 +21,7 @@ def _optional_int_env(name: str) -> Optional[int]:
     except ValueError:
         return None
 
-
+#将api，url，model等解析完成配置
 class Config:
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
     OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")

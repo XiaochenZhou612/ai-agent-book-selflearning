@@ -92,7 +92,7 @@ code_interpreter 实际执行，不得口算或声称运行了代码。"""
             if verbosity not in {None, "low", "medium", "high"}:
                 raise ValueError("verbosity must be low, medium, or high")
         request: Dict[str, Any] = {
-            "model": self.model,
+            "model": self.model, #组合模型，instructions，输入
             "instructions": self.system_prompt,
             "input": input_text,
         }
@@ -100,12 +100,12 @@ code_interpreter 实际执行，不得口算或声称运行了代码。"""
             # DashScope runs thinking natively and has no reasoning.effort or
             # text.verbosity knobs; its gateway also drops non-streaming
             # requests that stay silent for ~60s, so streaming is mandatory.
-            request["stream"] = True
+            request["stream"] = True #reasoning是思考多深入
         else:
             request["reasoning"] = {"effort": reasoning_effort}
             request["background"] = background
             request["store"] = True
-            if verbosity:
+            if verbosity:#回答的多详细
                 request["text"] = {"verbosity": verbosity}
         if max_output_tokens:
             request["max_output_tokens"] = max_output_tokens
@@ -113,7 +113,7 @@ code_interpreter 实际执行，不得口算或声称运行了代码。"""
             request["tools"] = self._tools()
             request["tool_choice"] = tool_choice
         if self.previous_response_id:
-            request["previous_response_id"] = self.previous_response_id
+            request["previous_response_id"] = self.previous_response_id #history
         return request
 
     @staticmethod
@@ -230,7 +230,7 @@ code_interpreter 实际执行，不得口算或声称运行了代码。"""
                                            "message": "stream ended without response.completed"}}, event_counts
         return status_code, final_response, event_counts
 
-    def process_request(
+    def process_request( #主流程处理
         self,
         user_request: str,
         use_tools: bool = True,
