@@ -1,0 +1,47 @@
+[
+  {
+    "test_name": "Baseline - Full Context",
+    "case_name": "Multinational Budget",
+    "context_mode": "full",
+    "execution_time": 17.44,
+    "iterations": 5,
+    "num_tool_calls": 7,
+    "completed": true,
+    "success": true,
+    "task_success": null,
+    "has_final_answer": true,
+    "grounding_verdict": "not_assessable",
+    "observation_count": 72,
+    "unsupported_quantities": [],
+    "error": null,
+    "reasoning_steps": 5,
+    "final_answer_preview": "# Q1 2024 Global Expense Consolidation & Analysis\n\n## 1. PDF Extraction Result\nI parsed the PDF at the given URL. It is the **Adobe Vendor Security Review (VSR) Program white paper** (3 pages). It con..."
+  },
+  {
+    "test_name": "Ablation 4 - No Tool Call Results",
+    "case_name": "Multinational Budget",
+    "context_mode": "no_tool_results",
+    "execution_time": 28.86,
+    "iterations": 8,
+    "num_tool_calls": 18,
+    "completed": true,
+    "success": true,
+    "task_success": null,
+    "has_final_answer": true,
+    "grounding_verdict": "ungrounded",
+    "observation_count": 0,
+    "unsupported_quantities": [
+      11955333.33,
+      2391066.67,
+      2300000.0,
+      1656000.0,
+      349600000.0,
+      1932000.0,
+      2944000.0,
+      10998906.67
+    ],
+    "error": null,
+    "reasoning_steps": 8,
+    "final_answer_preview": "**\n\n- **Total global expenses (USD): $11,955,333.33**\n- **Average per region (USD): $2,391,066.67**\n- **Region shares:** Japan 21.19%, US 20.91%, Singapore 19.81%, UK 19.12%, EU 18.97%\n- **8% reductio..."
+  }
+]

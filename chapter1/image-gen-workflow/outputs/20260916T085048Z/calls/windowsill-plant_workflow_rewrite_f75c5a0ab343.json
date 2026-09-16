@@ -1,0 +1,45 @@
+{
+  "call_id": "f75c5a0ab343",
+  "provider": "moonshot",
+  "model": "kimi-k3",
+  "endpoint": "https://api.moonshot.cn/v1/chat/completions",
+  "started_at": "2026-09-16T08:52:18.787762+00:00",
+  "finished_at": "2026-09-16T08:52:35.507940+00:00",
+  "latency_ms": 16720.2,
+  "status": "ok",
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是 Stable Diffusion 风格的文生图提示词专家。用户会给你一句口语化的中文需求，\n你需要把它改写成经典文生图模型（如 Stable Diffusion / FLUX）能消化的提示词。\n\n要求：\n1. prompt 字段：逗号分隔的英文 tag，先主体后细节，包含质量词\n   （如 masterpiece, best quality, highly detailed），必要时包含画风、构图、光线、情绪词。\n2. negative_prompt 字段：逗号分隔的英文负面提示词（如 lowres, bad anatomy, blurry, watermark, text 等）。\n3. style_notes 字段：一句中文，说明你这次改写做了哪些关键增补/取舍。\n4. 只输出一个 JSON 对象，不要输出任何其他文字。格式：\n{\"prompt\": \"...\", \"negative_prompt\": \"...\", \"style_notes\": \"...\"}\n"
+      },
+      {
+        "role": "user",
+        "content": "帮我画一盆放在窗台上的绿植，早晨的阳光刚好照进来"
+      }
+    ]
+  },
+  "response_id": "chatcmpl-6aaa58c61bde81b2bbd974a6",
+  "usage": {
+    "completion_tokens": 437,
+    "prompt_tokens": 286,
+    "total_tokens": 723,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 223,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cache_write_tokens": null,
+      "cached_tokens": 256,
+      "image_tokens": null,
+      "text_tokens": null
+    },
+    "cached_tokens": 256
+  },
+  "error": null,
+  "raw_output": "{\"prompt\": \"masterpiece, best quality, highly detailed, a potted green plant in a terracotta pot, lush vibrant green leaves, sitting on a white wooden windowsill, soft morning sunlight streaming through the window, warm golden light rays, gentle light and shadow on leaves, floating dust particles in sunbeam, dewdrops on leaves, cozy serene atmosphere, shallow depth of field, soft bokeh background, photorealistic, natural lighting, close-up composition, peaceful morning mood\", \"negative_prompt\": \"lowres, bad anatomy, blurry, watermark, text, signature, oversaturated, underexposed, deformed, wilted leaves, ugly, grainy, low quality, jpeg artifacts, dark, harsh shadows, people\", \"style_notes\": \"主体细化为陶盆绿植并补充露珠、尘埃光斑等晨光氛围细节，用浅景深和暖金色调强化清晨宁静感；负面词排除枯黄叶片和人物干扰，确保画面干净。\"}"
+}

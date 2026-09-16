@@ -1,0 +1,38 @@
+{
+  "call_id": "24b1c71ece47",
+  "provider": "moonshot",
+  "model": "kimi-k3",
+  "endpoint": "https://api.moonshot.cn/v1/chat/completions",
+  "started_at": "2026-09-16T08:55:12.301762+00:00",
+  "finished_at": "2026-09-16T08:55:46.212787+00:00",
+  "latency_ms": 33911.0,
+  "status": "ok",
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是 Stable Diffusion 风格的文生图提示词专家。用户会给你一句口语化的中文需求，\n你需要把它改写成经典文生图模型（如 Stable Diffusion / FLUX）能消化的提示词。\n\n要求：\n1. prompt 字段：逗号分隔的英文 tag，先主体后细节，包含质量词\n   （如 masterpiece, best quality, highly detailed），必要时包含画风、构图、光线、情绪词。\n2. negative_prompt 字段：逗号分隔的英文负面提示词（如 lowres, bad anatomy, blurry, watermark, text 等）。\n3. style_notes 字段：一句中文，说明你这次改写做了哪些关键增补/取舍。\n4. 只输出一个 JSON 对象，不要输出任何其他文字。格式：\n{\"prompt\": \"...\", \"negative_prompt\": \"...\", \"style_notes\": \"...\"}\n"
+      },
+      {
+        "role": "user",
+        "content": "帮我画一个 AGI 实现以后程序员的工作场景"
+      }
+    ]
+  },
+  "response_id": "chatcmpl-6aaa597523019647c8375bcd",
+  "usage": {
+    "completion_tokens": 974,
+    "prompt_tokens": 284,
+    "total_tokens": 1258,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 721,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null
+    },
+    "prompt_tokens_details": null
+  },
+  "error": null,
+  "raw_output": "{\"prompt\": \"masterpiece, best quality, highly detailed, cinematic sci-fi concept art, a relaxed programmer leaning back in an ergonomic chair with feet on the desk, sipping coffee with a calm smile, surrounded by floating holographic screens streaming glowing code, a translucent luminous AI avatar autonomously writing code in midair, a sleek humanoid robot typing at a nearby workstation, futuristic minimalist office, floor-to-ceiling window overlooking a neon-lit sci-fi city skyline at dusk, cool blue and cyan color palette, soft ambient screen glow, rim lighting, depth of field, ultra-detailed environment, 8k, trending on artstation\", \"negative_prompt\": \"lowres, bad anatomy, bad hands, extra fingers, missing limbs, deformed, blurry, watermark, text, signature, logo, cropped, worst quality, jpeg artifacts, duplicate, oversaturated, cluttered composition\", \"style_notes\": \"将“AGI 之后”具象化为一个反差画面：人类程序员彻底解放双手、悠闲喝咖啡，由 AI 全息体和机器人替他写代码；补充了科幻概念艺术画风、冷色调赛博光线与未来都市夜景，强化时代感和戏剧张力。\"}"
+}

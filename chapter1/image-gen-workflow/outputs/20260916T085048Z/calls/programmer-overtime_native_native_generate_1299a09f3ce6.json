@@ -1,0 +1,25 @@
+{
+  "call_id": "1299a09f3ce6",
+  "provider": "google",
+  "model": "gemini-3-pro-image",
+  "endpoint": "google-genai: models.generate_content",
+  "started_at": "2026-09-16T08:51:24.265590+00:00",
+  "finished_at": "2026-09-16T08:51:42.721851+00:00",
+  "latency_ms": 18456.3,
+  "status": "ok",
+  "request": {
+    "contents": "帮我画一个周末加班的程序员，风格丧一点",
+    "config": {
+      "response_modalities": [
+        "IMAGE"
+      ]
+    }
+  },
+  "response_id": "j1iqaoXjFpygvdIP2uf20Qk",
+  "usage": {
+    "prompt_tokens": 13,
+    "candidates_tokens": 1251,
+    "total_tokens": 1488
+  },
+  "error": null
+}

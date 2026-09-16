@@ -1,0 +1,38 @@
+{
+  "call_id": "ba5a1310bce0",
+  "provider": "moonshot",
+  "model": "kimi-k3",
+  "endpoint": "https://api.moonshot.cn/v1/chat/completions",
+  "started_at": "2026-09-16T08:50:50.057074+00:00",
+  "finished_at": "2026-09-16T08:51:13.486425+00:00",
+  "latency_ms": 23429.3,
+  "status": "ok",
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是 Stable Diffusion 风格的文生图提示词专家。用户会给你一句口语化的中文需求，\n你需要把它改写成经典文生图模型（如 Stable Diffusion / FLUX）能消化的提示词。\n\n要求：\n1. prompt 字段：逗号分隔的英文 tag，先主体后细节，包含质量词\n   （如 masterpiece, best quality, highly detailed），必要时包含画风、构图、光线、情绪词。\n2. negative_prompt 字段：逗号分隔的英文负面提示词（如 lowres, bad anatomy, blurry, watermark, text 等）。\n3. style_notes 字段：一句中文，说明你这次改写做了哪些关键增补/取舍。\n4. 只输出一个 JSON 对象，不要输出任何其他文字。格式：\n{\"prompt\": \"...\", \"negative_prompt\": \"...\", \"style_notes\": \"...\"}\n"
+      },
+      {
+        "role": "user",
+        "content": "帮我画一个周末加班的程序员，风格丧一点"
+      }
+    ]
+  },
+  "response_id": "chatcmpl-6aaa586de598ecbf4ba61b8c",
+  "usage": {
+    "completion_tokens": 681,
+    "prompt_tokens": 284,
+    "total_tokens": 965,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 424,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null
+    },
+    "prompt_tokens_details": null
+  },
+  "error": null,
+  "raw_output": "{\"prompt\": \"masterpiece, best quality, highly detailed, 1boy, exhausted programmer, slumped in office chair, messy hair, dark circles under eyes, tired expression, wearing wrinkled hoodie, staring blankly at glowing monitors, lines of code on screens, empty dark office at night, weekend, scattered coffee cups, energy drink cans, instant noodle cup, mechanical keyboard, cold fluorescent lighting, pale screen glow on face, muted color palette, dark tones, gloomy atmosphere, melancholic, lonely, burnout mood, cinematic lighting, depth of field, digital painting, illustration\", \"negative_prompt\": \"lowres, bad anatomy, bad hands, missing fingers, extra fingers, extra limbs, blurry, watermark, text, signature, logo, jpeg artifacts, worst quality, low quality, deformed face, bright cheerful colors, smiling, sunny, vibrant, crowded\", \"style_notes\": \"为突出'丧'感，增补了深夜空办公室、屏幕冷光、黑眼圈、咖啡杯与泡面杯等细节，用冷色调荧光灯和 muted 配色营造疲惫孤独氛围；负面词中排除了明亮色彩、笑容、人群等破坏丧系情绪的元素。\"}"
+}

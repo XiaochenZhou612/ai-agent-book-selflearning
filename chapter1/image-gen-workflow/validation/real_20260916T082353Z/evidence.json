@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "1-4",
+  "evidence_mode": "real_api",
+  "created_at": "2026-09-16T08:24:36.222446+00:00",
+  "canonical_source": "book/chapter1.md#实验-1-4-文生图工作流与原生图像生成的对照",
+  "credential_source_env": [
+    "KIMI_API_KEY",
+    "DASHSCOPE_API_KEY",
+    "GEMINI_API_KEY"
+  ],
+  "credential_value_recorded": false,
+  "host": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "machine": "AMD64"
+  },
+  "repository": {
+    "commit": "be305248903fb85030b4f8d2c3dd2b6a90a3079c",
+    "branch": "main",
+    "worktree_dirty": true
+  },
+  "requirements": [
+    {
+      "id": "windowsill-plant",
+      "category": "specific",
+      "text": "帮我画一盆放在窗台上的绿植，早晨的阳光刚好照进来"
+    }
+  ],
+  "runs": [
+    {
+      "requirement_id": "windowsill-plant",
+      "route": "workflow",
+      "input": "帮我画一盆放在窗台上的绿植，早晨的阳光刚好照进来",
+      "rewrite": {
+        "prompt": "masterpiece, best quality, highly detailed, a potted green plant, lush vibrant green leaves, ceramic flowerpot, on a wooden windowsill, bright window, morning sunlight streaming in, golden morning light, soft sunbeams, warm light rays, gentle light and shadow interplay, fresh air, cozy and peaceful atmosphere, shallow depth of field, soft bokeh background, photorealistic, warm color tone, tranquil mood, 8k",
+        "negative_prompt": "lowres, bad anatomy, blurry, watermark, text, signature, jpeg artifacts, worst quality, low quality, oversaturated, overexposed, underexposed, distorted, deformed, ugly, duplicate, cropped, out of frame",
+        "style_notes": "将\"早晨的阳光\"细化为 golden morning light、sunbeams、light rays 等经典光线标签，补充了陶瓷花盆、木质窗台等材质细节与浅景深构图，并加入 cozy、tranquil 等情绪词营造清晨静谧氛围。"
+      },
+      "nodes": [
+        {
+          "node": "rewrite",
+          "call": {
+            "call_id": "2c45a1394fe4",
+            "provider": "moonshot",
+            "model": "kimi-k3",
+            "endpoint": "https://api.moonshot.cn/v1/chat/completions",
+            "started_at": "2026-09-16T08:23:55.995538+00:00",
+            "finished_at": "2026-09-16T08:24:16.192986+00:00",
+            "latency_ms": 20197.4,
+            "status": "ok",
+            "request": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是 Stable Diffusion 风格的文生图提示词专家。用户会给你一句口语化的中文需求，\n你需要把它改写成经典文生图模型（如 Stable Diffusion / FLUX）能消化的提示词。\n\n要求：\n1. prompt 字段：逗号分隔的英文 tag，先主体后细节，包含质量词\n   （如 masterpiece, best quality, highly detailed），必要时包含画风、构图、光线、情绪词。\n2. negative_prompt 字段：逗号分隔的英文负面提示词（如 lowres, bad anatomy, blurry, watermark, text 等）。\n3. style_notes 字段：一句中文，说明你这次改写做了哪些关键增补/取舍。\n4. 只输出一个 JSON 对象，不要输出任何其他文字。格式：\n{\"prompt\": \"...\", \"negative_prompt\": \"...\", \"style_notes\": \"...\"}\n"
+                },
+                {
+                  "role": "user",
+                  "content": "帮我画一盆放在窗台上的绿植，早晨的阳光刚好照进来"
+                }
+              ]
+            },
+            "response_id": "chatcmpl-6aaa5222dec9eb85b39cad5b",
+            "usage": {
+              "completion_tokens": 482,
+              "prompt_tokens": 286,
+              "total_tokens": 768,
+              "completion_tokens_details": {
+                "accepted_prediction_tokens": null,
+                "audio_tokens": null,
+                "reasoning_tokens": 259,
+                "rejected_prediction_tokens": null,
+                "text_tokens": null
+              },
+              "prompt_tokens_details": null
+            },
+            "error": null,
+            "raw_output": "{\"prompt\": \"masterpiece, best quality, highly detailed, a potted green plant, lush vibrant green leaves, ceramic flowerpot, on a wooden windowsill, bright window, morning sunlight streaming in, golden morning light, soft sunbeams, warm light rays, gentle light and shadow interplay, fresh air, cozy and peaceful atmosphere, shallow depth of field, soft bokeh background, photorealistic, warm color tone, tranquil mood, 8k\", \"negative_prompt\": \"lowres, bad anatomy, blurry, watermark, text, signature, jpeg artifacts, worst quality, low quality, oversaturated, overexposed, underexposed, distorted, deformed, ugly, duplicate, cropped, out of frame\", \"style_notes\": \"将\\\"早晨的阳光\\\"细化为 golden morning light、sunbeams、light rays 等经典光线标签，补充了陶瓷花盆、木质窗台等材质细节与浅景深构图，并加入 cozy、tranquil 等情绪词营造清晨静谧氛围。\"}"
+          },
+          "output": {
+            "prompt": "masterpiece, best quality, highly detailed, a potted green plant, lush vibrant green leaves, ceramic flowerpot, on a wooden windowsill, bright window, morning sunlight streaming in, golden morning light, soft sunbeams, warm light rays, gentle light and shadow interplay, fresh air, cozy and peaceful atmosphere, shallow depth of field, soft bokeh background, photorealistic, warm color tone, tranquil mood, 8k",
+            "negative_prompt": "lowres, bad anatomy, blurry, watermark, text, signature, jpeg artifacts, worst quality, low quality, oversaturated, overexposed, underexposed, distorted, deformed, ugly, duplicate, cropped, out of frame",
+            "style_notes": "将\"早晨的阳光\"细化为 golden morning light、sunbeams、light rays 等经典光线标签，补充了陶瓷花盆、木质窗台等材质细节与浅景深构图，并加入 cozy、tranquil 等情绪词营造清晨静谧氛围。"
+          }
+        },
+        {
+          "node": "image_generate",
+          "calls": [
+            {
+              "call_id": "ed4ac6aa355a",
+              "provider": "dashscope",
+              "model": "wan2.2-t2i-flash",
+              "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+              "started_at": "2026-09-16T08:24:16.193076+00:00",
+              "finished_at": "2026-09-16T08:24:17.770516+00:00",
+              "latency_ms": 1577.4,
+              "status": "ok",
+              "request": {
+                "input": {
+                  "prompt": "masterpiece, best quality, highly detailed, a potted green plant, lush vibrant green leaves, ceramic flowerpot, on a wooden windowsill, bright window, morning sunlight streaming in, golden morning light, soft sunbeams, warm light rays, gentle light and shadow interplay, fresh air, cozy and peaceful atmosphere, shallow depth of field, soft bokeh background, photorealistic, warm color tone, tranquil mood, 8k",
+                  "negative_prompt": "lowres, bad anatomy, blurry, watermark, text, signature, jpeg artifacts, worst quality, low quality, oversaturated, overexposed, underexposed, distorted, deformed, ugly, duplicate, cropped, out of frame"
+                },
+                "parameters": {
+                  "size": "1024*1024",
+                  "n": 1
+                }
+              },
+              "response_id": "4b57de63-6b66-9db6-95c7-280b77e6f88e",
+              "usage": {},
+              "error": null,
+              "task_id": "9c219e72-c646-485b-8d06-7b53b943059c"
+            },
+            {
+              "call_id": "e1a801d79de0",
+              "provider": "dashscope",
+              "model": "wan2.2-t2i-flash",
+              "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/tasks/9c219e72-c646-485b-8d06-7b53b943059c",
+              "started_at": "2026-09-16T08:24:17.770628+00:00",
+              "finished_at": "2026-09-16T08:24:30.318436+00:00",
+              "latency_ms": 12547.8,
+              "status": "ok",
+              "request": {},
+              "response_id": "da90dd7c-6045-9a1a-911b-3e2054194c8c",
+              "usage": {
+                "image_count": 1
+              },
+              "error": null,
+              "task_id": "9c219e72-c646-485b-8d06-7b53b943059c",
+              "task_metrics": {
+                "submit_time": "2026-09-16 16:24:19.126",
+                "scheduled_time": "2026-09-16 16:24:19.155",
+                "end_time": "2026-09-16 16:24:25.681"
+              },
+              "actual_prompt": "Photorealistic still life, 8K resolution: A vibrant potted monstera deliciosa with glossy, deeply lobed emerald leaves cascading over a matte ivory ceramic planter. The pot rests on a weathered light-oak windowsill bathed in golden morning sunlight. Sunbeams pierce a clean, slightly fogged glass window, casting delicate caustic patterns and soft-edged shadows. Dust motes float visibly in the warm air. Background dissolves into creamy bokeh—hints of blurred greenery and pale linen curtains. Warm "
+            },
+            {
+              "call_id": "c0103043f377",
+              "provider": "dashscope",
+              "model": "wan2.2-t2i-flash",
+              "endpoint": "https://dashscope-result-sgp.oss-ap-southeast-1.aliyuncs.com/1d/a2/20260916/652f5a73/9c219e72-c646-485b-8d06-7b53b943059c2559692143.png",
+              "started_at": "2026-09-16T08:24:30.318495+00:00",
+              "finished_at": "2026-09-16T08:24:32.565836+00:00",
+              "latency_ms": 2247.4,
+              "status": "ok",
+              "request": {},
+              "response_id": null,
+              "usage": {},
+              "error": null,
+              "response_bytes": 1407647
+            }
+          ],
+          "output": {
+            "prompt_used": "masterpiece, best quality, highly detailed, a potted green plant, lush vibrant green leaves, ceramic flowerpot, on a wooden windowsill, bright window, morning sunlight streaming in, golden morning light, soft sunbeams, warm light rays, gentle light and shadow interplay, fresh air, cozy and peaceful atmosphere, shallow depth of field, soft bokeh background, photorealistic, warm color tone, tranquil mood, 8k",
+            "negative_prompt_used": "lowres, bad anatomy, blurry, watermark, text, signature, jpeg artifacts, worst quality, low quality, oversaturated, overexposed, underexposed, distorted, deformed, ugly, duplicate, cropped, out of frame"
+          }
+        }
+      ],
+      "image": {
+        "path": "outputs\\20260916T082353Z\\images\\windowsill-plant_workflow.png",
+        "sha256": "9afb24f67368f5b0984b530fe336c1866b85d703931b7df5ce2b4aa1625f673a",
+        "bytes": 1407647,
+        "mime": "image/png"
+      },
+      "error": null
+    },
+    {
+      "requirement_id": "windowsill-plant",
+      "route": "native",
+      "input": "帮我画一盆放在窗台上的绿植，早晨的阳光刚好照进来",
+      "rewrite": null,
+      "nodes": [],
+      "image": null,
+      "error": "RuntimeError: 原生路线调用失败: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3-pro-image\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3-pro-image\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3-pro-image\\nPlease retry in 23.320156817s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3-pro-image'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3-pro-image'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-3-pro-image', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}"
+    },
+    {
+      "requirement_id": "windowsill-plant",
+      "route": "native_gptimage",
+      "input": "帮我画一盆放在窗台上的绿植，早晨的阳光刚好照进来",
+      "rewrite": null,
+      "nodes": [],
+      "image": null,
+      "error": "RuntimeError: GPT-Image 原生路线调用失败: Error code: 403 - {'error': {'message': 'Image generation is not enabled for this group', 'type': 'permission_error'}}"
+    }
+  ],
+  "notes": [
+    "原生路线 A（native）：gemini-3-pro-image（书稿所称 Nano Banana 2），使用官方 google-genai SDK 直接出图（response_modalities=[IMAGE]）；ListModels 实测可用，偶发内容过滤（content=None），重跑即恢复。",
+    "原生路线 B（native_gptimage）：gpt-image-2（GPT-Image 2），OpenAI images.generations 接口，全部 5 句需求均一次成功；该账户此前 GPT-5.x 的 credit_balance_exhausted 未影响图像接口。",
+    "工作流路线生图工具：首选 SiliconFlow 托管 FLUX/SD，实测 black-forest-labs/FLUX.1-schnell 与 stabilityai/stable-diffusion-3-5-large 返回 Model disabled，账户余额为 0；OpenRouter 仅提供视觉理解模型，不支持文本转图像生成；改用 DashScope 国际站通义万相 wan2.2-t2i-flash（经典扩散式文生图，接受 SD 风格提示词）。",
+    "改写节点 LLM：Moonshot kimi-k3（OpenAI 兼容接口）；kimi-k3 只允许 temperature=1，显式传其他值被 400 拒绝（见第 1 轮失败记录）。"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "call_id": "e1a801d79de0",
+  "provider": "dashscope",
+  "model": "wan2.2-t2i-flash",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/tasks/9c219e72-c646-485b-8d06-7b53b943059c",
+  "started_at": "2026-09-16T08:24:17.770628+00:00",
+  "finished_at": "2026-09-16T08:24:30.318436+00:00",
+  "latency_ms": 12547.8,
+  "status": "ok",
+  "request": {},
+  "response_id": "da90dd7c-6045-9a1a-911b-3e2054194c8c",
+  "usage": {
+    "image_count": 1
+  },
+  "error": null,
+  "task_id": "9c219e72-c646-485b-8d06-7b53b943059c",
+  "task_metrics": {
+    "submit_time": "2026-09-16 16:24:19.126",
+    "scheduled_time": "2026-09-16 16:24:19.155",
+    "end_time": "2026-09-16 16:24:25.681"
+  },
+  "actual_prompt": "Photorealistic still life, 8K resolution: A vibrant potted monstera deliciosa with glossy, deeply lobed emerald leaves cascading over a matte ivory ceramic planter. The pot rests on a weathered light-oak windowsill bathed in golden morning sunlight. Sunbeams pierce a clean, slightly fogged glass window, casting delicate caustic patterns and soft-edged shadows. Dust motes float visibly in the warm air. Background dissolves into creamy bokeh—hints of blurred greenery and pale linen curtains. Warm "
+}

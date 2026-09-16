@@ -1,0 +1,30 @@
+{
+  "call_id": "6e7e62fcd41f",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "endpoint": "https://birdapi.up.railway.app//images/generations",
+  "started_at": "2026-09-16T08:53:09.130891+00:00",
+  "finished_at": "2026-09-16T08:53:40.866333+00:00",
+  "latency_ms": 31735.4,
+  "status": "ok",
+  "request": {
+    "prompt": "帮我画一盆放在窗台上的绿植，早晨的阳光刚好照进来",
+    "size": "1024x1024",
+    "n": 1
+  },
+  "response_id": "1789548818",
+  "usage": {
+    "input_tokens": 23,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 23
+    },
+    "output_tokens": 2058,
+    "total_tokens": 2081,
+    "output_tokens_details": {
+      "image_tokens": 2058,
+      "text_tokens": 0
+    }
+  },
+  "error": null
+}

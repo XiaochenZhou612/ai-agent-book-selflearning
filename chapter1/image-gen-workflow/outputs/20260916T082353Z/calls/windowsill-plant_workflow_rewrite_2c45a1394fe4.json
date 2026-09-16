@@ -1,0 +1,38 @@
+{
+  "call_id": "2c45a1394fe4",
+  "provider": "moonshot",
+  "model": "kimi-k3",
+  "endpoint": "https://api.moonshot.cn/v1/chat/completions",
+  "started_at": "2026-09-16T08:23:55.995538+00:00",
+  "finished_at": "2026-09-16T08:24:16.192986+00:00",
+  "latency_ms": 20197.4,
+  "status": "ok",
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是 Stable Diffusion 风格的文生图提示词专家。用户会给你一句口语化的中文需求，\n你需要把它改写成经典文生图模型（如 Stable Diffusion / FLUX）能消化的提示词。\n\n要求：\n1. prompt 字段：逗号分隔的英文 tag，先主体后细节，包含质量词\n   （如 masterpiece, best quality, highly detailed），必要时包含画风、构图、光线、情绪词。\n2. negative_prompt 字段：逗号分隔的英文负面提示词（如 lowres, bad anatomy, blurry, watermark, text 等）。\n3. style_notes 字段：一句中文，说明你这次改写做了哪些关键增补/取舍。\n4. 只输出一个 JSON 对象，不要输出任何其他文字。格式：\n{\"prompt\": \"...\", \"negative_prompt\": \"...\", \"style_notes\": \"...\"}\n"
+      },
+      {
+        "role": "user",
+        "content": "帮我画一盆放在窗台上的绿植，早晨的阳光刚好照进来"
+      }
+    ]
+  },
+  "response_id": "chatcmpl-6aaa5222dec9eb85b39cad5b",
+  "usage": {
+    "completion_tokens": 482,
+    "prompt_tokens": 286,
+    "total_tokens": 768,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 259,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null
+    },
+    "prompt_tokens_details": null
+  },
+  "error": null,
+  "raw_output": "{\"prompt\": \"masterpiece, best quality, highly detailed, a potted green plant, lush vibrant green leaves, ceramic flowerpot, on a wooden windowsill, bright window, morning sunlight streaming in, golden morning light, soft sunbeams, warm light rays, gentle light and shadow interplay, fresh air, cozy and peaceful atmosphere, shallow depth of field, soft bokeh background, photorealistic, warm color tone, tranquil mood, 8k\", \"negative_prompt\": \"lowres, bad anatomy, blurry, watermark, text, signature, jpeg artifacts, worst quality, low quality, oversaturated, overexposed, underexposed, distorted, deformed, ugly, duplicate, cropped, out of frame\", \"style_notes\": \"将\\\"早晨的阳光\\\"细化为 golden morning light、sunbeams、light rays 等经典光线标签，补充了陶瓷花盆、木质窗台等材质细节与浅景深构图，并加入 cozy、tranquil 等情绪词营造清晨静谧氛围。\"}"
+}

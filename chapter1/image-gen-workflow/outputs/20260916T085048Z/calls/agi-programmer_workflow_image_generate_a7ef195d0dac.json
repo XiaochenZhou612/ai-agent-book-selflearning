@@ -1,0 +1,23 @@
+{
+  "call_id": "a7ef195d0dac",
+  "provider": "dashscope",
+  "model": "wan2.2-t2i-flash",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/tasks/16fd2faa-f3f4-4483-a8b7-fd4075ebd1af",
+  "started_at": "2026-09-16T08:55:47.514146+00:00",
+  "finished_at": "2026-09-16T08:56:00.026163+00:00",
+  "latency_ms": 12512.0,
+  "status": "ok",
+  "request": {},
+  "response_id": "a1c1459e-f7a9-9e3d-95f4-c1f28ec4c59e",
+  "usage": {
+    "image_count": 1
+  },
+  "error": null,
+  "task_id": "16fd2faa-f3f4-4483-a8b7-fd4075ebd1af",
+  "task_metrics": {
+    "submit_time": "2026-09-16 16:55:48.830",
+    "scheduled_time": "2026-09-16 16:55:48.853",
+    "end_time": "2026-09-16 16:55:55.682"
+  },
+  "actual_prompt": "Cinematic sci-fi concept art, ultra-detailed 8K resolution: A calm, ethnically ambiguous programmer in a tailored navy tech-weave shirt leans back in a matte-black ergonomic chair, bare feet propped on a glass desk, holding a steaming ceramic mug. Around them, six translucent holographic displays float at varying depths—each pulsing with glowing green and cyan code streams. A slender, gender-neutral luminous AI avatar—composed of shimmering particle light—hovers midair, fingers trailing cascadin"
+}

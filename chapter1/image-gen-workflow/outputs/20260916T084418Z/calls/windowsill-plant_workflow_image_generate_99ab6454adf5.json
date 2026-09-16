@@ -1,0 +1,23 @@
+{
+  "call_id": "99ab6454adf5",
+  "provider": "dashscope",
+  "model": "wan2.2-t2i-flash",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/tasks/4f32ea3a-098f-46a9-8d78-0fb6b24ae1a7",
+  "started_at": "2026-09-16T08:44:46.653050+00:00",
+  "finished_at": "2026-09-16T08:44:59.590972+00:00",
+  "latency_ms": 12937.9,
+  "status": "ok",
+  "request": {},
+  "response_id": "87167cf7-e54a-9706-a0a3-cdff2a29c335",
+  "usage": {
+    "image_count": 1
+  },
+  "error": null,
+  "task_id": "4f32ea3a-098f-46a9-8d78-0fb6b24ae1a7",
+  "task_metrics": {
+    "submit_time": "2026-09-16 16:44:47.978",
+    "scheduled_time": "2026-09-16 16:44:48.000",
+    "end_time": "2026-09-16 16:44:54.599"
+  },
+  "actual_prompt": "Photorealistic 8K still life: A thriving potted monstera deliciosa with broad, glossy, deeply lobed emerald leaves cascading over the rim of a weathered terracotta clay pot. Positioned on a sun-bleached oak windowsill with subtle wood grain texture. Warm golden-hour morning light floods in from a large double-hung window, casting soft, directional sunbeams with visible volumetric rays and delicate suspended dust motes. Gentle, natural shadows fall across the sill; background softly blurred into "
+}

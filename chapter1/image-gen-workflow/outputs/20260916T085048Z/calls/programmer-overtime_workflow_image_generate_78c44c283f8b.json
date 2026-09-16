@@ -1,0 +1,23 @@
+{
+  "call_id": "78c44c283f8b",
+  "provider": "dashscope",
+  "model": "wan2.2-t2i-flash",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/tasks/d33c85a5-7e8b-41d5-8afe-8917e63524dd",
+  "started_at": "2026-09-16T08:51:14.829225+00:00",
+  "finished_at": "2026-09-16T08:51:21.067023+00:00",
+  "latency_ms": 6237.8,
+  "status": "ok",
+  "request": {},
+  "response_id": "d55d453f-c4f7-9ac6-84fe-f6b5c6cede85",
+  "usage": {
+    "image_count": 1
+  },
+  "error": null,
+  "task_id": "d33c85a5-7e8b-41d5-8afe-8917e63524dd",
+  "task_metrics": {
+    "submit_time": "2026-09-16 16:51:16.155",
+    "scheduled_time": "2026-09-16 16:51:16.176",
+    "end_time": "2026-09-16 16:51:22.306"
+  },
+  "actual_prompt": "Cinematic digital painting of an exhausted young male programmer slumped in a worn office chair at midnight, weekend solitude. His messy dark hair falls over tired eyes shadowed by deep purple circles; he wears a rumpled gray hoodie, fingers resting limply on a mechanical keyboard. Three monitors glow with dense lines of code—Python, terminal logs, debugging windows. Surrounding him: scattered coffee cups, crushed energy drink cans, an opened instant noodle cup, crumpled snack wrappers. The empt"
+}

@@ -1,0 +1,24 @@
+{
+  "call_id": "5a4969f5b3b5",
+  "provider": "dashscope",
+  "model": "wan2.2-t2i-flash",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+  "started_at": "2026-09-16T08:55:46.212851+00:00",
+  "finished_at": "2026-09-16T08:55:47.514092+00:00",
+  "latency_ms": 1301.3,
+  "status": "ok",
+  "request": {
+    "input": {
+      "prompt": "masterpiece, best quality, highly detailed, cinematic sci-fi concept art, a relaxed programmer leaning back in an ergonomic chair with feet on the desk, sipping coffee with a calm smile, surrounded by floating holographic screens streaming glowing code, a translucent luminous AI avatar autonomously writing code in midair, a sleek humanoid robot typing at a nearby workstation, futuristic minimalist office, floor-to-ceiling window overlooking a neon-lit sci-fi city skyline at dusk, cool blue and cyan color palette, soft ambient screen glow, rim lighting, depth of field, ultra-detailed environment, 8k, trending on artstation",
+      "negative_prompt": "lowres, bad anatomy, bad hands, extra fingers, missing limbs, deformed, blurry, watermark, text, signature, logo, cropped, worst quality, jpeg artifacts, duplicate, oversaturated, cluttered composition"
+    },
+    "parameters": {
+      "size": "1024*1024",
+      "n": 1
+    }
+  },
+  "response_id": "32d5fbe6-abff-9c4b-ba33-f45c3df94ed3",
+  "usage": {},
+  "error": null,
+  "task_id": "16fd2faa-f3f4-4483-a8b7-fd4075ebd1af"
+}

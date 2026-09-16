@@ -1,0 +1,23 @@
+{
+  "call_id": "7c26b688f755",
+  "provider": "dashscope",
+  "model": "wan2.2-t2i-flash",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/tasks/ce6e903c-be7e-4fdc-9af4-fed7ecd936cb",
+  "started_at": "2026-09-16T08:54:06.120987+00:00",
+  "finished_at": "2026-09-16T08:54:18.815792+00:00",
+  "latency_ms": 12694.8,
+  "status": "ok",
+  "request": {},
+  "response_id": "87783ac5-d396-961d-bee0-8fab06f64e9e",
+  "usage": {
+    "image_count": 1
+  },
+  "error": null,
+  "task_id": "ce6e903c-be7e-4fdc-9af4-fed7ecd936cb",
+  "task_metrics": {
+    "submit_time": "2026-09-16 16:54:07.435",
+    "scheduled_time": "2026-09-16 16:54:07.463",
+    "end_time": "2026-09-16 16:54:14.658"
+  },
+  "actual_prompt": "Premium wireless noise-canceling headphones: sleek matte black over-ear design with brushed aluminum earcups, memory foam earpads wrapped in premium perforated leather, and a slim titanium headband. Floating centrally against a deep midnight blue-to-black gradient backdrop. Cinematic soft rim lighting casts a cool, ethereal moonlight glow from upper left, highlighting fine metallic bevels and subtle leather grain. Gentle ambient shadow and faint polished floor reflection ground the product. Sere"
+}

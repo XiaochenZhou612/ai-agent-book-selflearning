@@ -1,0 +1,18 @@
+{
+  "call_id": "e3efb23238c5",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "endpoint": "https://birdapi.up.railway.app//images/generations",
+  "started_at": "2026-09-16T08:56:22.425882+00:00",
+  "finished_at": "2026-09-16T08:57:05.989738+00:00",
+  "latency_ms": 43563.9,
+  "status": "ok",
+  "request": {
+    "prompt": "帮我画一个 AGI 实现以后程序员的工作场景",
+    "size": "1024x1024",
+    "n": 1
+  },
+  "response_id": "1789549024",
+  "usage": {},
+  "error": null
+}

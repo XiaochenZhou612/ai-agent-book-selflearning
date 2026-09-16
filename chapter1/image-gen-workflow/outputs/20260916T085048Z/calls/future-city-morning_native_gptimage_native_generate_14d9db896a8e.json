@@ -1,0 +1,30 @@
+{
+  "call_id": "14d9db896a8e",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "endpoint": "https://birdapi.up.railway.app//images/generations",
+  "started_at": "2026-09-16T09:17:49.223649+00:00",
+  "finished_at": "2026-09-16T09:18:28.489328+00:00",
+  "latency_ms": 39265.7,
+  "status": "ok",
+  "request": {
+    "prompt": "帮我画一幅“未来城市的早晨”的画",
+    "size": "1024x1024",
+    "n": 1
+  },
+  "response_id": "1789550307",
+  "usage": {
+    "input_tokens": 13,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 13
+    },
+    "output_tokens": 2058,
+    "total_tokens": 2071,
+    "output_tokens_details": {
+      "image_tokens": 2058,
+      "text_tokens": 0
+    }
+  },
+  "error": null
+}

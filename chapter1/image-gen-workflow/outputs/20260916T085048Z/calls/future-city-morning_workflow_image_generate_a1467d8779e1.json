@@ -1,0 +1,24 @@
+{
+  "call_id": "a1467d8779e1",
+  "provider": "dashscope",
+  "model": "wan2.2-t2i-flash",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+  "started_at": "2026-09-16T08:57:35.936961+00:00",
+  "finished_at": "2026-09-16T08:57:37.589272+00:00",
+  "latency_ms": 1652.3,
+  "status": "ok",
+  "request": {
+    "input": {
+      "prompt": "masterpiece, best quality, highly detailed, futuristic city, sci-fi cityscape, towering skyscrapers, glass and chrome architecture, flying vehicles, hovering cars, holographic billboards, neon signs, elevated skyways, rooftop gardens, morning, golden sunrise, soft morning light, sun rays piercing between buildings, light mist, warm orange and cool blue sky, scattered clouds, reflections on glass facades, dew, cinematic lighting, wide angle, panoramic view, depth of field, serene and hopeful atmosphere, 8k, sharp focus",
+      "negative_prompt": "lowres, low quality, worst quality, blurry, bad anatomy, bad hands, extra limbs, deformed, text, watermark, signature, logo, jpeg artifacts, oversaturated, night, dark, rain, storm, pollution haze, ruins, dystopian grime"
+    },
+    "parameters": {
+      "size": "1024*1024",
+      "n": 1
+    }
+  },
+  "response_id": "70c84388-b339-9ea1-993a-708af1edc08b",
+  "usage": {},
+  "error": null,
+  "task_id": "a9fd5591-0185-437a-9199-adbb9dadfda6"
+}

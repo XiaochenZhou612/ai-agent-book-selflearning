@@ -1,0 +1,23 @@
+{
+  "call_id": "31f863114dcf",
+  "provider": "dashscope",
+  "model": "wan2.2-t2i-flash",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/tasks/9a23d116-f09b-4b9d-9dd9-daf3a7a00e1f",
+  "started_at": "2026-09-16T08:52:36.879865+00:00",
+  "finished_at": "2026-09-16T08:52:49.734269+00:00",
+  "latency_ms": 12854.4,
+  "status": "ok",
+  "request": {},
+  "response_id": "47e2d27e-7b98-9848-8b02-016f8012b700",
+  "usage": {
+    "image_count": 1
+  },
+  "error": null,
+  "task_id": "9a23d116-f09b-4b9d-9dd9-daf3a7a00e1f",
+  "task_metrics": {
+    "submit_time": "2026-09-16 16:52:38.199",
+    "scheduled_time": "2026-09-16 16:52:38.223",
+    "end_time": "2026-09-16 16:52:45.266"
+  },
+  "actual_prompt": "Photorealistic close-up of a lush potted monstera deliciosa in a hand-thrown terracotta pot, vibrant emerald leaves with delicate veining and glistening dewdrops catching soft morning light. Positioned on a weathered white pine windowsill bathed in warm golden-hour sunlight. Sunbeams stream diagonally through a slightly frosted glass window, illuminating suspended dust particles. Gentle chiaroscuro highlights leaf textures and subtle shadows. Background rendered in creamy shallow-depth bokeh—hin"
+}

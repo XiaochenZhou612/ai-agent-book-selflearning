@@ -1,0 +1,24 @@
+{
+  "call_id": "916ec6585543",
+  "provider": "dashscope",
+  "model": "wan2.2-t2i-flash",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+  "started_at": "2026-09-16T08:44:45.254677+00:00",
+  "finished_at": "2026-09-16T08:44:46.652999+00:00",
+  "latency_ms": 1398.3,
+  "status": "ok",
+  "request": {
+    "input": {
+      "prompt": "masterpiece, best quality, highly detailed, photorealistic, a potted green plant on a wooden windowsill, lush vibrant green leaves, terracotta clay pot, morning sunlight streaming through the window, soft sunbeams, visible light rays, tiny dust particles floating in the light, warm golden hour lighting, gentle soft shadows, cozy and peaceful atmosphere, shallow depth of field, blurred background, bokeh, natural light, 8k resolution",
+      "negative_prompt": "lowres, worst quality, low quality, blurry, watermark, text, signature, logo, jpeg artifacts, oversaturated, underexposed, overexposed, deformed, ugly, noisy, cropped, bad composition, harsh shadows"
+    },
+    "parameters": {
+      "size": "1024*1024",
+      "n": 1
+    }
+  },
+  "response_id": "25315f04-7877-936a-8871-7679affa9206",
+  "usage": {},
+  "error": null,
+  "task_id": "4f32ea3a-098f-46a9-8d78-0fb6b24ae1a7"
+}

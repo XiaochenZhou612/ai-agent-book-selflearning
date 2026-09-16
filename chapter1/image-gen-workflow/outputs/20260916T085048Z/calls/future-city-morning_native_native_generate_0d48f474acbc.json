@@ -1,0 +1,25 @@
+{
+  "call_id": "0d48f474acbc",
+  "provider": "google",
+  "model": "gemini-3-pro-image",
+  "endpoint": "google-genai: models.generate_content",
+  "started_at": "2026-09-16T08:57:52.616553+00:00",
+  "finished_at": "2026-09-16T08:58:10.022008+00:00",
+  "latency_ms": 17405.4,
+  "status": "ok",
+  "request": {
+    "contents": "帮我画一幅“未来城市的早晨”的画",
+    "config": {
+      "response_modalities": [
+        "IMAGE"
+      ]
+    }
+  },
+  "response_id": "E1qqaoSqHPywxN8PtLfdiAU",
+  "usage": {
+    "prompt_tokens": 14,
+    "candidates_tokens": 1253,
+    "total_tokens": 1500
+  },
+  "error": null
+}

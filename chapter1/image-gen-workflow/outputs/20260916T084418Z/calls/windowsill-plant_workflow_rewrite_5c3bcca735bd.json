@@ -1,0 +1,38 @@
+{
+  "call_id": "5c3bcca735bd",
+  "provider": "moonshot",
+  "model": "kimi-k3",
+  "endpoint": "https://api.moonshot.cn/v1/chat/completions",
+  "started_at": "2026-09-16T08:44:19.706252+00:00",
+  "finished_at": "2026-09-16T08:44:45.254617+00:00",
+  "latency_ms": 25548.4,
+  "status": "ok",
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是 Stable Diffusion 风格的文生图提示词专家。用户会给你一句口语化的中文需求，\n你需要把它改写成经典文生图模型（如 Stable Diffusion / FLUX）能消化的提示词。\n\n要求：\n1. prompt 字段：逗号分隔的英文 tag，先主体后细节，包含质量词\n   （如 masterpiece, best quality, highly detailed），必要时包含画风、构图、光线、情绪词。\n2. negative_prompt 字段：逗号分隔的英文负面提示词（如 lowres, bad anatomy, blurry, watermark, text 等）。\n3. style_notes 字段：一句中文，说明你这次改写做了哪些关键增补/取舍。\n4. 只输出一个 JSON 对象，不要输出任何其他文字。格式：\n{\"prompt\": \"...\", \"negative_prompt\": \"...\", \"style_notes\": \"...\"}\n"
+      },
+      {
+        "role": "user",
+        "content": "帮我画一盆放在窗台上的绿植，早晨的阳光刚好照进来"
+      }
+    ]
+  },
+  "response_id": "chatcmpl-6aaa56ea0aa16c166985b732",
+  "usage": {
+    "completion_tokens": 594,
+    "prompt_tokens": 286,
+    "total_tokens": 880,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 363,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null
+    },
+    "prompt_tokens_details": null
+  },
+  "error": null,
+  "raw_output": "{\"prompt\": \"masterpiece, best quality, highly detailed, photorealistic, a potted green plant on a wooden windowsill, lush vibrant green leaves, terracotta clay pot, morning sunlight streaming through the window, soft sunbeams, visible light rays, tiny dust particles floating in the light, warm golden hour lighting, gentle soft shadows, cozy and peaceful atmosphere, shallow depth of field, blurred background, bokeh, natural light, 8k resolution\", \"negative_prompt\": \"lowres, worst quality, low quality, blurry, watermark, text, signature, logo, jpeg artifacts, oversaturated, underexposed, overexposed, deformed, ugly, noisy, cropped, bad composition, harsh shadows\", \"style_notes\": \"用户只说了窗台绿植和晨光，我补充了陶土花盆、木质窗台、空气中浮尘、浅景深虚化背景等细节来增强画面氛围；因未指定画风，默认采用写实摄影风格并加入暖金色光线与宁静情绪词，负面词覆盖画质与曝光问题。\"}"
+}

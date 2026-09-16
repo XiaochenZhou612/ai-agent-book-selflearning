@@ -1,0 +1,25 @@
+{
+  "call_id": "ff5b3fe7ed86",
+  "provider": "google",
+  "model": "gemini-3-pro-image",
+  "endpoint": "google-genai: models.generate_content",
+  "started_at": "2026-09-16T08:52:52.178823+00:00",
+  "finished_at": "2026-09-16T08:53:09.115909+00:00",
+  "latency_ms": 16937.1,
+  "status": "ok",
+  "request": {
+    "contents": "帮我画一盆放在窗台上的绿植，早晨的阳光刚好照进来",
+    "config": {
+      "response_modalities": [
+        "IMAGE"
+      ]
+    }
+  },
+  "response_id": "51iqavyuC5mzkdUPhJ__oAc",
+  "usage": {
+    "prompt_tokens": 20,
+    "candidates_tokens": 1219,
+    "total_tokens": 1337
+  },
+  "error": null
+}

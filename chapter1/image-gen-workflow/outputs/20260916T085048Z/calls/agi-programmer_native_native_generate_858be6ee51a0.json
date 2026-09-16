@@ -1,0 +1,25 @@
+{
+  "call_id": "858be6ee51a0",
+  "provider": "google",
+  "model": "gemini-3-pro-image",
+  "endpoint": "google-genai: models.generate_content",
+  "started_at": "2026-09-16T08:56:02.440833+00:00",
+  "finished_at": "2026-09-16T08:56:22.418390+00:00",
+  "latency_ms": 19977.6,
+  "status": "ok",
+  "request": {
+    "contents": "帮我画一个 AGI 实现以后程序员的工作场景",
+    "config": {
+      "response_modalities": [
+        "IMAGE"
+      ]
+    }
+  },
+  "response_id": "pVmqao2jEsfcxs0PpcT2cA",
+  "usage": {
+    "prompt_tokens": 12,
+    "candidates_tokens": 1270,
+    "total_tokens": 1556
+  },
+  "error": null
+}

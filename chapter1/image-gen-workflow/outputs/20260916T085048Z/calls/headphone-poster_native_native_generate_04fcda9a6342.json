@@ -1,0 +1,25 @@
+{
+  "call_id": "04fcda9a6342",
+  "provider": "google",
+  "model": "gemini-3-pro-image",
+  "endpoint": "google-genai: models.generate_content",
+  "started_at": "2026-09-16T08:54:21.198362+00:00",
+  "finished_at": "2026-09-16T08:54:38.724104+00:00",
+  "latency_ms": 17525.8,
+  "status": "ok",
+  "request": {
+    "contents": "帮我做一张新款降噪耳机的产品海报，主打“深夜独处也清净”这句文案，风格简约高级",
+    "config": {
+      "response_modalities": [
+        "IMAGE"
+      ]
+    }
+  },
+  "response_id": "QFmqauvRBvewxN8P_I-8wAk",
+  "usage": {
+    "prompt_tokens": 32,
+    "candidates_tokens": 1240,
+    "total_tokens": 1438
+  },
+  "error": null
+}

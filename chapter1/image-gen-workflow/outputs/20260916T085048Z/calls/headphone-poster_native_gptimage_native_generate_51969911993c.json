@@ -1,0 +1,30 @@
+{
+  "call_id": "51969911993c",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "endpoint": "https://birdapi.up.railway.app//images/generations",
+  "started_at": "2026-09-16T08:54:38.731248+00:00",
+  "finished_at": "2026-09-16T08:55:12.294054+00:00",
+  "latency_ms": 33562.8,
+  "status": "ok",
+  "request": {
+    "prompt": "帮我做一张新款降噪耳机的产品海报，主打“深夜独处也清净”这句文案，风格简约高级",
+    "size": "1024x1024",
+    "n": 1
+  },
+  "response_id": "1789548911",
+  "usage": {
+    "input_tokens": 38,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 38
+    },
+    "output_tokens": 2058,
+    "total_tokens": 2096,
+    "output_tokens_details": {
+      "image_tokens": 2058,
+      "text_tokens": 0
+    }
+  },
+  "error": null
+}

@@ -1,0 +1,23 @@
+{
+  "call_id": "60fdc0b6a65c",
+  "provider": "dashscope",
+  "model": "wan2.2-t2i-flash",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/api/v1/tasks/a9fd5591-0185-437a-9199-adbb9dadfda6",
+  "started_at": "2026-09-16T08:57:37.589355+00:00",
+  "finished_at": "2026-09-16T08:57:50.208455+00:00",
+  "latency_ms": 12619.1,
+  "status": "ok",
+  "request": {},
+  "response_id": "a6643a64-a830-9eb4-ae4b-f4653caa07ce",
+  "usage": {
+    "image_count": 1
+  },
+  "error": null,
+  "task_id": "a9fd5591-0185-437a-9199-adbb9dadfda6",
+  "task_metrics": {
+    "submit_time": "2026-09-16 16:57:38.900",
+    "scheduled_time": "2026-09-16 16:57:38.919",
+    "end_time": "2026-09-16 16:57:46.114"
+  },
+  "actual_prompt": "Cinematic 8K sci-fi cityscape at golden sunrise: towering glass-and-chrome skyscrapers with curved, aerodynamic forms, shimmering reflections of dawn light and soft mist. Elevated skyways crisscross between buildings, lined with sleek hovering vehicles and glowing maglev trains. Holographic billboards project dynamic advertisements; neon signs pulse gently in warm amber and electric cyan. Rooftop gardens bloom with dew-kissed ferns and solar-panel canopies. Sun rays pierce narrow canyons between"
+}

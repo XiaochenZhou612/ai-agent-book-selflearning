@@ -1,0 +1,45 @@
+{
+  "call_id": "c487b146e6f9",
+  "provider": "moonshot",
+  "model": "kimi-k3",
+  "endpoint": "https://api.moonshot.cn/v1/chat/completions",
+  "started_at": "2026-09-16T08:57:05.997490+00:00",
+  "finished_at": "2026-09-16T08:57:35.936896+00:00",
+  "latency_ms": 29939.4,
+  "status": "ok",
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是 Stable Diffusion 风格的文生图提示词专家。用户会给你一句口语化的中文需求，\n你需要把它改写成经典文生图模型（如 Stable Diffusion / FLUX）能消化的提示词。\n\n要求：\n1. prompt 字段：逗号分隔的英文 tag，先主体后细节，包含质量词\n   （如 masterpiece, best quality, highly detailed），必要时包含画风、构图、光线、情绪词。\n2. negative_prompt 字段：逗号分隔的英文负面提示词（如 lowres, bad anatomy, blurry, watermark, text 等）。\n3. style_notes 字段：一句中文，说明你这次改写做了哪些关键增补/取舍。\n4. 只输出一个 JSON 对象，不要输出任何其他文字。格式：\n{\"prompt\": \"...\", \"negative_prompt\": \"...\", \"style_notes\": \"...\"}\n"
+      },
+      {
+        "role": "user",
+        "content": "帮我画一幅“未来城市的早晨”的画"
+      }
+    ]
+  },
+  "response_id": "chatcmpl-6aaa59e6f6362c90b0c3b455",
+  "usage": {
+    "completion_tokens": 619,
+    "prompt_tokens": 282,
+    "total_tokens": 901,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 352,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cache_write_tokens": null,
+      "cached_tokens": 256,
+      "image_tokens": null,
+      "text_tokens": null
+    },
+    "cached_tokens": 256
+  },
+  "error": null,
+  "raw_output": "{\"prompt\": \"masterpiece, best quality, highly detailed, futuristic city, sci-fi cityscape, towering skyscrapers, glass and chrome architecture, flying vehicles, hovering cars, holographic billboards, neon signs, elevated skyways, rooftop gardens, morning, golden sunrise, soft morning light, sun rays piercing between buildings, light mist, warm orange and cool blue sky, scattered clouds, reflections on glass facades, dew, cinematic lighting, wide angle, panoramic view, depth of field, serene and hopeful atmosphere, 8k, sharp focus\", \"negative_prompt\": \"lowres, low quality, worst quality, blurry, bad anatomy, bad hands, extra limbs, deformed, text, watermark, signature, logo, jpeg artifacts, oversaturated, night, dark, rain, storm, pollution haze, ruins, dystopian grime\", \"style_notes\": \"用‘金色日出、晨光穿楼、薄雾’明确点出早晨氛围，用‘玻璃摩天楼、飞行载具、全息广告牌、空中步道’落实未来感，并加入广角全景构图与电影级光线提升画面层次；负面词中排除黑夜、阴雨与废土元素，避免画面跑偏成赛博朋克夜景。\"}"
+}

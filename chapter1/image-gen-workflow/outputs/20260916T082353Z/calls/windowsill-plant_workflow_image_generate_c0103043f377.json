@@ -1,0 +1,15 @@
+{
+  "call_id": "c0103043f377",
+  "provider": "dashscope",
+  "model": "wan2.2-t2i-flash",
+  "endpoint": "https://dashscope-result-sgp.oss-ap-southeast-1.aliyuncs.com/1d/a2/20260916/652f5a73/9c219e72-c646-485b-8d06-7b53b943059c2559692143.png",
+  "started_at": "2026-09-16T08:24:30.318495+00:00",
+  "finished_at": "2026-09-16T08:24:32.565836+00:00",
+  "latency_ms": 2247.4,
+  "status": "ok",
+  "request": {},
+  "response_id": null,
+  "usage": {},
+  "error": null,
+  "response_bytes": 1407647
+}
