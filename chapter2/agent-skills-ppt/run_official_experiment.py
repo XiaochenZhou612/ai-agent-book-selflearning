@@ -103,6 +103,30 @@ def resolve_kimi_binary() -> str:
     raise RuntimeError("Kimi Code CLI not found on PATH or at ~/.kimi-code/bin/kimi")
 
 
+def link_skill_directory(link: Path, target: Path) -> None:
+    """Expose a Skill directory without copying it.
+
+    Windows normally requires Developer Mode or elevated privileges for a
+    directory symlink.  A directory junction provides the same indirection
+    for this experiment and can be created by an ordinary user.
+    """
+    try:
+        link.symlink_to(target, target_is_directory=True)
+        return
+    except OSError as error:
+        if os.name != "nt" or getattr(error, "winerror", None) != 1314:
+            raise
+
+    result = subprocess.run(
+        ["cmd.exe", "/d", "/c", "mklink", "/J", str(link), str(target)],
+        text=True,
+        capture_output=True,
+    )
+    if result.returncode != 0:
+        detail = result.stderr.strip() or result.stdout.strip()
+        raise RuntimeError(f"could not create Windows directory junction: {detail}")
+
+
 def stream_process(command: list[str], workspace: Path, env: dict, stream_path: Path,
                    stderr_path: Path, tag: str) -> int:
     with stream_path.open("w", encoding="utf-8") as stdout_file, stderr_path.open(
@@ -133,9 +157,7 @@ def stream_process(command: list[str], workspace: Path, env: dict, stream_path: 
 
 def run_claude(args, run_dir: Path, workspace: Path, official_skill: Path, protocol: dict) -> None:
     (workspace / ".claude" / "skills").mkdir(parents=True)
-    (workspace / ".claude" / "skills" / "pptx").symlink_to(
-        official_skill, target_is_directory=True
-    )
+    link_skill_directory(workspace / ".claude" / "skills" / "pptx", official_skill)
     prompt = CLAUDE_PROMPT
     (run_dir / "prompt.txt").write_text(prompt, encoding="utf-8")
     command = [
@@ -176,7 +198,7 @@ def run_kimi(args, run_dir: Path, workspace: Path, official_skill: Path, protoco
     # official Skill's metadata in its catalog.
     skills_dir = workspace / "kimi-skills"
     skills_dir.mkdir(parents=True)
-    (skills_dir / "pptx").symlink_to(official_skill, target_is_directory=True)
+    link_skill_directory(skills_dir / "pptx", official_skill)
     prompt = KIMI_PROMPT
     (run_dir / "prompt.txt").write_text(prompt, encoding="utf-8")
     command = [
