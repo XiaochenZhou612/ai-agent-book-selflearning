@@ -1,0 +1,434 @@
+{
+  "config": {
+    "embed_model": null,
+    "reranker_model": null,
+    "top_k": 10,
+    "k_rrf": 60,
+    "eval_k": 3,
+    "chunk_size": 280,
+    "chunk_overlap": 40,
+    "device": "cpu"
+  },
+  "summary": {
+    "sparse": {
+      "recall@k": 0.8333333333333334,
+      "mrr": 0.7916666666666666,
+      "ndcg@k": 0.8025774794642881,
+      "latency_ms": {
+        "mean": 88.83287500187483,
+        "p50": 0.1674999948590994,
+        "p95": 1064.5286000071792
+      }
+    }
+  },
+  "per_query": [
+    {
+      "query": "XR-7003",
+      "expected": [
+        "xr_7003"
+      ],
+      "category": "technical-code",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "xr_7003",
+              "score": 3.3578
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.16570001025684178
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.16570001025684178
+        },
+        "rank_changes": []
+      }
+    },
+    {
+      "query": "XR-7005",
+      "expected": [
+        "xr_7005"
+      ],
+      "category": "technical-code",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "xr_7005",
+              "score": 3.3578
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.058200006606057286
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.058200006606057286
+        },
+        "rank_changes": []
+      }
+    },
+    {
+      "query": "HTTP-403",
+      "expected": [
+        "http_403"
+      ],
+      "category": "technical-code",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "http_403",
+              "score": 3.234
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.046600005589425564
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.046600005589425564
+        },
+        "rank_changes": []
+      }
+    },
+    {
+      "query": "HTTP-400",
+      "expected": [
+        "http_400"
+      ],
+      "category": "technical-code",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "http_400",
+              "score": 3.234
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.040099999750964344
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.040099999750964344
+        },
+        "rank_changes": []
+      }
+    },
+    {
+      "query": "Alexander Humphrey",
+      "expected": [
+        "name_alexander_humphrey"
+      ],
+      "category": "exact-name",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 5.1114
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 2.5557
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 2.5557
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.06529998790938407
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.06529998790938407
+        },
+        "rank_changes": []
+      }
+    },
+    {
+      "query": "a beginner friendly language with tidy syntax",
+      "expected": [
+        "sem_readable"
+      ],
+      "category": "semantic",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "sem_readable",
+              "score": 2.9118
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.7496
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.7496
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.7496
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.7496
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.16989999858196825
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.16989999858196825
+        },
+        "rank_changes": []
+      }
+    },
+    {
+      "query": "reclaiming unused heap space without programmer effort",
+      "expected": [
+        "sem_gc"
+      ],
+      "category": "semantic",
+      "methods": {
+        "sparse": {
+          "top": [],
+          "recall@k": 0.0,
+          "mrr": 0.0,
+          "ndcg@k": 0.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.18440000712871552
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.18440000712871552
+        },
+        "rank_changes": []
+      }
+    },
+    {
+      "query": "how vegetation turns light into food",
+      "expected": [
+        "sem_photo"
+      ],
+      "category": "semantic",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 3.5307
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 2.4648
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 0.5,
+          "ndcg@k": 0.6309
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.13630000466946512
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.13630000466946512
+        },
+        "rank_changes": []
+      }
+    },
+    {
+      "query": "hiding a note so eavesdroppers cannot understand it",
+      "expected": [
+        "sem_crypto"
+      ],
+      "category": "semantic",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "sem_crypto",
+              "score": 5.2654
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 1.4711
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.8428
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.7496
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.7496
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.17759999900590628
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.17759999900590628
+        },
+        "rank_changes": []
+      }
+    },
+    {
+      "query": "植物如何把阳光转化为食物",
+      "expected": [
+        "sem_photo"
+      ],
+      "category": "multilingual",
+      "methods": {
+        "sparse": {
+          "top": [],
+          "recall@k": 0.0,
+          "mrr": 0.0,
+          "ndcg@k": 0.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 1064.5286000071792
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 1064.5286000071792
+        },
+        "rank_changes": []
+      }
+    },
+    {
+      "query": "how does water move between the ocean and the sky",
+      "expected": [
+        "doc_watercycle"
+      ],
+      "category": "semantic",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 9.8355
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 2.6283
+            },
+            {
+              "doc_id": "http_400",
+              "score": 1.444
+            },
+            {
+              "doc_id": "http_401",
+              "score": 1.444
+            },
+            {
+              "doc_id": "http_403",
+              "score": 1.444
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.25430000096093863
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.25430000096093863
+        },
+        "rank_changes": []
+      }
+    },
+    {
+      "query": "how are volcanoes formed from molten rock",
+      "expected": [
+        "doc_volcano"
+      ],
+      "category": "semantic",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "doc_volcano",
+              "score": 3.4557
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 2.7155
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 2.0863
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.1674999948590994
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.1674999948590994
+        },
+        "rank_changes": []
+      }
+    }
+  ],
+  "elapsed_sec": 1.07,
+  "eval_k": 3
+}

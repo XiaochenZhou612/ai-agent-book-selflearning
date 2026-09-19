@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/anthropics/skills.git",
+  "revision": "69c0b1a0674149f27b61b2635f935524b6add202",
+  "skill_path": "D:\\Elena_Zhou\\Documents\\ai agent\\chapter2\\agent-skills-ppt\\external\\anthropics-skills\\skills\\pptx",
+  "required_file_hashes": {
+    "skills\\pptx\\SKILL.md": "5b282b8989c7aee4d1b1d64092f78228b3a98ff981de0c57843c8b6e9f249979",
+    "skills\\pptx\\html2pptx.md": "ddcfb3c719489236e2b14d0816c93460d1aa60bee5797fb117315b895465fa52",
+    "skills\\pptx\\scripts\\html2pptx.js": "cfb023e8c17a74a35158126f2733d0a2aaa7b7f291e269b2f1828b449dd4f398",
+    "skills\\pptx\\scripts\\thumbnail.py": "621bfaea29326ee99e450563cdba69e7ef24b4547e4cc87960f48dfdb9e749a4"
+  }
+}

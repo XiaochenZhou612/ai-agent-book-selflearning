@@ -1,0 +1,2616 @@
+{
+  "config": {
+    "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "reranker_model": "BAAI/bge-reranker-base",
+    "top_k": 10,
+    "k_rrf": 60,
+    "eval_k": 3,
+    "chunk_size": 280,
+    "chunk_overlap": 40,
+    "device": "cuda"
+  },
+  "summary": {
+    "sparse": {
+      "recall@k": 0.8333333333333334,
+      "mrr": 0.7916666666666666,
+      "ndcg@k": 0.8025774794642881,
+      "latency_ms": {
+        "mean": 85.06805241646968,
+        "p50": 0.2216039993072627,
+        "p95": 1018.4950490001938
+      }
+    },
+    "dense": {
+      "recall@k": 1.0,
+      "mrr": 0.9166666666666666,
+      "ndcg@k": 0.9384882922619097,
+      "latency_ms": {
+        "mean": 32.92787458349267,
+        "p50": 16.987327000606456,
+        "p95": 218.10666599958495
+      }
+    },
+    "rrf": {
+      "recall@k": 1.0,
+      "mrr": 1.0,
+      "ndcg@k": 1.0,
+      "latency_ms": {
+        "mean": 118.01710533291043,
+        "p50": 20.74707199790282,
+        "p95": 1029.7408620008355
+      }
+    },
+    "weighted": {
+      "recall@k": 1.0,
+      "mrr": 0.9583333333333334,
+      "ndcg@k": 0.9692441461309548,
+      "latency_ms": {
+        "mean": 118.02182133305905,
+        "p50": 20.68018699901586,
+        "p95": 1029.7491630008153
+      }
+    },
+    "rerank": {
+      "recall@k": 1.0,
+      "mrr": 0.9583333333333334,
+      "ndcg@k": 0.9692441461309548,
+      "latency_ms": {
+        "mean": 158.72362341603244,
+        "p50": 55.42505700213951,
+        "p95": 1061.2271200006944
+      }
+    }
+  },
+  "per_query": [
+    {
+      "query": "XR-7003",
+      "expected": [
+        "xr_7003"
+      ],
+      "category": "technical-code",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "xr_7003",
+              "score": 3.3578
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "dense": {
+          "top": [
+            {
+              "doc_id": "xr_7001",
+              "score": 0.5247
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.5195
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.5032
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.5024
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.5003
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 0.5,
+          "ndcg@k": 0.6309
+        },
+        "rrf": {
+          "top": [
+            {
+              "doc_id": "xr_7003",
+              "score": 0.0325
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.0164
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.0159
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.0156
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.0154
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "weighted": {
+          "top": [
+            {
+              "doc_id": "xr_7003",
+              "score": 1.9882
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 1.0
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.9516
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.9497
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.9451
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rerank": {
+          "top": [
+            {
+              "doc_id": "xr_7003",
+              "score": 7.2404
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 4.2298
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 3.1281
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.4864
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.383
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.2216039993072627,
+          "dense": 218.10666599958495,
+          "rrf_fusion": 0.024296999981743284,
+          "weighted_fusion": 0.03550699875631835,
+          "rerank": 114.15691999900446
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.2216039993072627,
+          "dense": 218.10666599958495,
+          "rrf": 218.35256699887395,
+          "weighted": 218.36377699764853,
+          "rerank": 332.5094869978784
+        },
+        "rank_changes": [
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 8,
+            "rerank_rank": 7,
+            "delta": 1
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 10,
+            "rerank_rank": 8,
+            "delta": 2
+          },
+          {
+            "doc_id": "name_alexander_humphrey",
+            "rrf_rank": 7,
+            "rerank_rank": 10,
+            "delta": -3
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 9,
+            "rerank_rank": 9,
+            "delta": 0
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 2,
+            "rerank_rank": 5,
+            "delta": -3
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 3,
+            "rerank_rank": 3,
+            "delta": 0
+          },
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "delta": 0
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 4,
+            "rerank_rank": 2,
+            "delta": 2
+          },
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 6,
+            "rerank_rank": 6,
+            "delta": 0
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 5,
+            "rerank_rank": 4,
+            "delta": 1
+          }
+        ]
+      }
+    },
+    {
+      "query": "XR-7005",
+      "expected": [
+        "xr_7005"
+      ],
+      "category": "technical-code",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "xr_7005",
+              "score": 3.3578
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "dense": {
+          "top": [
+            {
+              "doc_id": "xr_7001",
+              "score": 0.5208
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.5163
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.5068
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.505
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.5038
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 0.5,
+          "ndcg@k": 0.6309
+        },
+        "rrf": {
+          "top": [
+            {
+              "doc_id": "xr_7005",
+              "score": 0.0325
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.0164
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.0159
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.0156
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.0154
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "weighted": {
+          "top": [
+            {
+              "doc_id": "xr_7005",
+              "score": 1.9889
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 1.0
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.9652
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.9609
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.9577
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rerank": {
+          "top": [
+            {
+              "doc_id": "xr_7005",
+              "score": 6.8456
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 1.0013
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.6106
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": -0.669
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": -1.0637
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.15941200035740621,
+          "dense": 13.318565999725251,
+          "rrf_fusion": 0.014276000001700595,
+          "weighted_fusion": 0.028186999770696275,
+          "rerank": 27.829880998979206
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.15941200035740621,
+          "dense": 13.318565999725251,
+          "rrf": 13.492254000084358,
+          "weighted": 13.506164999853354,
+          "rerank": 41.322134999063564
+        },
+        "rank_changes": [
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 7,
+            "rerank_rank": 8,
+            "delta": -1
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 8,
+            "rerank_rank": 7,
+            "delta": 1
+          },
+          {
+            "doc_id": "name_alexander_humphrey",
+            "rrf_rank": 9,
+            "rerank_rank": 9,
+            "delta": 0
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 10,
+            "rerank_rank": 10,
+            "delta": 0
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 2,
+            "rerank_rank": 6,
+            "delta": -4
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 6,
+            "rerank_rank": 4,
+            "delta": 2
+          },
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 3,
+            "rerank_rank": 5,
+            "delta": -2
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 4,
+            "rerank_rank": 2,
+            "delta": 2
+          },
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "delta": 0
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 5,
+            "rerank_rank": 3,
+            "delta": 2
+          }
+        ]
+      }
+    },
+    {
+      "query": "HTTP-403",
+      "expected": [
+        "http_403"
+      ],
+      "category": "technical-code",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "http_403",
+              "score": 3.234
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "dense": {
+          "top": [
+            {
+              "doc_id": "http_403",
+              "score": 0.7748
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.5378
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.534
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.4965
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.4916
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rrf": {
+          "top": [
+            {
+              "doc_id": "http_403",
+              "score": 0.0328
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.0161
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.0159
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.0156
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.0154
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "weighted": {
+          "top": [
+            {
+              "doc_id": "http_403",
+              "score": 2.0
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.6946
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.6898
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.6415
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.6352
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rerank": {
+          "top": [
+            {
+              "doc_id": "http_403",
+              "score": 4.2933
+            },
+            {
+              "doc_id": "http_404",
+              "score": 1.6366
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.9748
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.6288
+            },
+            {
+              "doc_id": "http_500",
+              "score": -2.515
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.14210199879016727,
+          "dense": 10.561279001194634,
+          "rrf_fusion": 0.013389999367063865,
+          "weighted_fusion": 0.028479000320658088,
+          "rerank": 26.61845600050583
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.14210199879016727,
+          "dense": 10.561279001194634,
+          "rrf": 10.716770999351866,
+          "weighted": 10.73186000030546,
+          "rerank": 37.335226999857696
+        },
+        "rank_changes": [
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 5,
+            "rerank_rank": 3,
+            "delta": 2
+          },
+          {
+            "doc_id": "http_401",
+            "rrf_rank": 2,
+            "rerank_rank": 4,
+            "delta": -2
+          },
+          {
+            "doc_id": "http_403",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "delta": 0
+          },
+          {
+            "doc_id": "http_404",
+            "rrf_rank": 3,
+            "rerank_rank": 2,
+            "delta": 1
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 4,
+            "rerank_rank": 5,
+            "delta": -1
+          },
+          {
+            "doc_id": "name_alexander_hughes",
+            "rrf_rank": 9,
+            "rerank_rank": 6,
+            "delta": 3
+          },
+          {
+            "doc_id": "name_alexander_humphrey",
+            "rrf_rank": 7,
+            "rerank_rank": 9,
+            "delta": -2
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 8,
+            "rerank_rank": 8,
+            "delta": 0
+          },
+          {
+            "doc_id": "sem_crypto",
+            "rrf_rank": 6,
+            "rerank_rank": 7,
+            "delta": -1
+          },
+          {
+            "doc_id": "sem_photo",
+            "rrf_rank": 10,
+            "rerank_rank": 10,
+            "delta": 0
+          }
+        ]
+      }
+    },
+    {
+      "query": "HTTP-400",
+      "expected": [
+        "http_400"
+      ],
+      "category": "technical-code",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "http_400",
+              "score": 3.234
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "dense": {
+          "top": [
+            {
+              "doc_id": "http_400",
+              "score": 0.692
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.5854
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.4883
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.419
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.4135
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rrf": {
+          "top": [
+            {
+              "doc_id": "http_400",
+              "score": 0.0328
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.0161
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.0159
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.0156
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.0154
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "weighted": {
+          "top": [
+            {
+              "doc_id": "http_400",
+              "score": 2.0
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.803
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.6233
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.4951
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.4851
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rerank": {
+          "top": [
+            {
+              "doc_id": "http_404",
+              "score": 4.6192
+            },
+            {
+              "doc_id": "http_400",
+              "score": 3.6861
+            },
+            {
+              "doc_id": "http_401",
+              "score": 1.9693
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.5258
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.0513
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 0.5,
+          "ndcg@k": 0.6309
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.12619900007848628,
+          "dense": 16.987327000606456,
+          "rrf_fusion": 0.013294999007484876,
+          "weighted_fusion": 0.02994900023622904,
+          "rerank": 27.382321999539272
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.12619900007848628,
+          "dense": 16.987327000606456,
+          "rrf": 17.126820999692427,
+          "weighted": 17.14347500092117,
+          "rerank": 44.5091429992317
+        },
+        "rank_changes": [
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 1,
+            "rerank_rank": 2,
+            "delta": -1
+          },
+          {
+            "doc_id": "http_401",
+            "rrf_rank": 3,
+            "rerank_rank": 3,
+            "delta": 0
+          },
+          {
+            "doc_id": "http_403",
+            "rrf_rank": 5,
+            "rerank_rank": 5,
+            "delta": 0
+          },
+          {
+            "doc_id": "http_404",
+            "rrf_rank": 4,
+            "rerank_rank": 1,
+            "delta": 3
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 2,
+            "rerank_rank": 4,
+            "delta": -2
+          },
+          {
+            "doc_id": "name_alexander_humphrey",
+            "rrf_rank": 9,
+            "rerank_rank": 6,
+            "delta": 3
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 8,
+            "rerank_rank": 9,
+            "delta": -1
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 6,
+            "rerank_rank": 10,
+            "delta": -4
+          },
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 10,
+            "rerank_rank": 7,
+            "delta": 3
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 7,
+            "rerank_rank": 8,
+            "delta": -1
+          }
+        ]
+      }
+    },
+    {
+      "query": "Alexander Humphrey",
+      "expected": [
+        "name_alexander_humphrey"
+      ],
+      "category": "exact-name",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 5.1114
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 2.5557
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 2.5557
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "dense": {
+          "top": [
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.3733
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.2051
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.1688
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.0825
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.0468
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rrf": {
+          "top": [
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.0328
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.0323
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.0317
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.0156
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.0154
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "weighted": {
+          "top": [
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 2.0
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.5184
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.4143
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.1672
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.065
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rerank": {
+          "top": [
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.3602
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": -5.7814
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": -10.1893
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": -10.1918
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": -10.1936
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.1743039993016282,
+          "dense": 20.481084999119048,
+          "rrf_fusion": 0.09168299948214553,
+          "weighted_fusion": 0.02479800059518311,
+          "rerank": 40.56739999941783
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.1743039993016282,
+          "dense": 20.481084999119048,
+          "rrf": 20.74707199790282,
+          "weighted": 20.68018699901586,
+          "rerank": 61.31447199732065
+        },
+        "rank_changes": [
+          {
+            "doc_id": "doc_volcano",
+            "rrf_rank": 4,
+            "rerank_rank": 5,
+            "delta": -1
+          },
+          {
+            "doc_id": "name_alexander_hughes",
+            "rrf_rank": 2,
+            "rerank_rank": 3,
+            "delta": -1
+          },
+          {
+            "doc_id": "name_alexander_humphrey",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "delta": 0
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 3,
+            "rerank_rank": 2,
+            "delta": 1
+          },
+          {
+            "doc_id": "sem_crypto",
+            "rrf_rank": 6,
+            "rerank_rank": 6,
+            "delta": 0
+          },
+          {
+            "doc_id": "sem_gc",
+            "rrf_rank": 5,
+            "rerank_rank": 4,
+            "delta": 1
+          },
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 10,
+            "rerank_rank": 9,
+            "delta": 1
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 8,
+            "rerank_rank": 10,
+            "delta": -2
+          },
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 9,
+            "rerank_rank": 7,
+            "delta": 2
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 7,
+            "rerank_rank": 8,
+            "delta": -1
+          }
+        ]
+      }
+    },
+    {
+      "query": "a beginner friendly language with tidy syntax",
+      "expected": [
+        "sem_readable"
+      ],
+      "category": "semantic",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "sem_readable",
+              "score": 2.9118
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.7496
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.7496
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.7496
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.7496
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "dense": {
+          "top": [
+            {
+              "doc_id": "sem_readable",
+              "score": 0.5064
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.1005
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.0864
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.08
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.0575
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rrf": {
+          "top": [
+            {
+              "doc_id": "sem_readable",
+              "score": 0.0328
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.0315
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.0306
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.0297
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.0294
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "weighted": {
+          "top": [
+            {
+              "doc_id": "sem_readable",
+              "score": 2.0
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.135
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.1051
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.0913
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.0561
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rerank": {
+          "top": [
+            {
+              "doc_id": "sem_readable",
+              "score": 0.3776
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": -10.1915
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": -10.1926
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": -10.1927
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": -10.1929
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.2431700013403315,
+          "dense": 25.250901000617887,
+          "rrf_fusion": 0.017247999494429678,
+          "weighted_fusion": 0.027685999157256447,
+          "rerank": 39.643125999646145
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.2431700013403315,
+          "dense": 25.250901000617887,
+          "rrf": 25.511319001452648,
+          "weighted": 25.521757001115475,
+          "rerank": 65.1544450010988
+        },
+        "rank_changes": [
+          {
+            "doc_id": "doc_volcano",
+            "rrf_rank": 10,
+            "rerank_rank": 4,
+            "delta": 6
+          },
+          {
+            "doc_id": "doc_watercycle",
+            "rrf_rank": 7,
+            "rerank_rank": 10,
+            "delta": -3
+          },
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 13,
+            "rerank_rank": null,
+            "delta": null
+          },
+          {
+            "doc_id": "http_401",
+            "rrf_rank": 14,
+            "rerank_rank": null,
+            "delta": null
+          },
+          {
+            "doc_id": "http_403",
+            "rrf_rank": 15,
+            "rerank_rank": null,
+            "delta": null
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 8,
+            "rerank_rank": 3,
+            "delta": 5
+          },
+          {
+            "doc_id": "sem_gc",
+            "rrf_rank": 6,
+            "rerank_rank": 2,
+            "delta": 4
+          },
+          {
+            "doc_id": "sem_photo",
+            "rrf_rank": 12,
+            "rerank_rank": null,
+            "delta": null
+          },
+          {
+            "doc_id": "sem_readable",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "delta": 0
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 2,
+            "rerank_rank": 7,
+            "delta": -5
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 3,
+            "rerank_rank": 6,
+            "delta": -3
+          },
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 9,
+            "rerank_rank": 5,
+            "delta": 4
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 4,
+            "rerank_rank": 9,
+            "delta": -5
+          },
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 11,
+            "rerank_rank": null,
+            "delta": null
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 5,
+            "rerank_rank": 8,
+            "delta": -3
+          }
+        ]
+      }
+    },
+    {
+      "query": "reclaiming unused heap space without programmer effort",
+      "expected": [
+        "sem_gc"
+      ],
+      "category": "semantic",
+      "methods": {
+        "sparse": {
+          "top": [],
+          "recall@k": 0.0,
+          "mrr": 0.0,
+          "ndcg@k": 0.0
+        },
+        "dense": {
+          "top": [
+            {
+              "doc_id": "sem_gc",
+              "score": 0.4511
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.0974
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.0925
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.0792
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.0589
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rrf": {
+          "top": [
+            {
+              "doc_id": "sem_gc",
+              "score": 0.0164
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.0161
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.0159
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.0156
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.0154
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "weighted": {
+          "top": [
+            {
+              "doc_id": "sem_gc",
+              "score": 1.0
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.2334
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.2228
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.1939
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.1499
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rerank": {
+          "top": [
+            {
+              "doc_id": "sem_gc",
+              "score": -3.1077
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": -8.2939
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": -10.1929
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": -10.1931
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": -10.1936
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.21554600061790552,
+          "dense": 23.98134600116464,
+          "rrf_fusion": 0.01065700053004548,
+          "weighted_fusion": 0.01686200084805023,
+          "rerank": 31.21750799982692
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.21554600061790552,
+          "dense": 23.98134600116464,
+          "rrf": 24.20754900231259,
+          "weighted": 24.213754002630594,
+          "rerank": 55.42505700213951
+        },
+        "rank_changes": [
+          {
+            "doc_id": "doc_volcano",
+            "rrf_rank": 7,
+            "rerank_rank": 3,
+            "delta": 4
+          },
+          {
+            "doc_id": "doc_watercycle",
+            "rrf_rank": 5,
+            "rerank_rank": 5,
+            "delta": 0
+          },
+          {
+            "doc_id": "name_alexander_hughes",
+            "rrf_rank": 3,
+            "rerank_rank": 7,
+            "delta": -4
+          },
+          {
+            "doc_id": "name_alexander_humphrey",
+            "rrf_rank": 8,
+            "rerank_rank": 8,
+            "delta": 0
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 6,
+            "rerank_rank": 6,
+            "delta": 0
+          },
+          {
+            "doc_id": "sem_gc",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "delta": 0
+          },
+          {
+            "doc_id": "sem_photo",
+            "rrf_rank": 4,
+            "rerank_rank": 4,
+            "delta": 0
+          },
+          {
+            "doc_id": "sem_readable",
+            "rrf_rank": 2,
+            "rerank_rank": 2,
+            "delta": 0
+          }
+        ]
+      }
+    },
+    {
+      "query": "how vegetation turns light into food",
+      "expected": [
+        "sem_photo"
+      ],
+      "category": "semantic",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 3.5307
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 2.4648
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 0.5,
+          "ndcg@k": 0.6309
+        },
+        "dense": {
+          "top": [
+            {
+              "doc_id": "sem_photo",
+              "score": 0.5604
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.3152
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.1562
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.1018
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.0875
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rrf": {
+          "top": [
+            {
+              "doc_id": "sem_photo",
+              "score": 0.0325
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.0325
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.0159
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.0156
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.0154
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "weighted": {
+          "top": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 1.532
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 1.0
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.2283
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.1244
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.097
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 0.5,
+          "ndcg@k": 0.6309
+        },
+        "rerank": {
+          "top": [
+            {
+              "doc_id": "sem_photo",
+              "score": -0.395
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": -6.9668
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": -8.8685
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": -10.1929
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": -10.1932
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.19748599879676476,
+          "dense": 25.13989399994898,
+          "rrf_fusion": 0.012210999557282776,
+          "weighted_fusion": 0.02084500010823831,
+          "rerank": 29.796451000947854
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.19748599879676476,
+          "dense": 25.13989399994898,
+          "rrf": 25.34959099830303,
+          "weighted": 25.358224998853984,
+          "rerank": 55.14604199925088
+        },
+        "rank_changes": [
+          {
+            "doc_id": "doc_volcano",
+            "rrf_rank": 3,
+            "rerank_rank": 3,
+            "delta": 0
+          },
+          {
+            "doc_id": "doc_watercycle",
+            "rrf_rank": 2,
+            "rerank_rank": 2,
+            "delta": 0
+          },
+          {
+            "doc_id": "sem_crypto",
+            "rrf_rank": 4,
+            "rerank_rank": 8,
+            "delta": -4
+          },
+          {
+            "doc_id": "sem_gc",
+            "rrf_rank": 5,
+            "rerank_rank": 4,
+            "delta": 1
+          },
+          {
+            "doc_id": "sem_photo",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "delta": 0
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 6,
+            "rerank_rank": 5,
+            "delta": 1
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 7,
+            "rerank_rank": 7,
+            "delta": 0
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 8,
+            "rerank_rank": 6,
+            "delta": 2
+          }
+        ]
+      }
+    },
+    {
+      "query": "hiding a note so eavesdroppers cannot understand it",
+      "expected": [
+        "sem_crypto"
+      ],
+      "category": "semantic",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "sem_crypto",
+              "score": 5.2654
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 1.4711
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.8428
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.7496
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.7496
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "dense": {
+          "top": [
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.49
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.129
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.1289
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.1279
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.1243
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rrf": {
+          "top": [
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.0328
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.0308
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.0308
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.0306
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.0303
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "weighted": {
+          "top": [
+            {
+              "doc_id": "sem_crypto",
+              "score": 2.0
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.1649
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.151
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.1509
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.1484
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rerank": {
+          "top": [
+            {
+              "doc_id": "sem_crypto",
+              "score": -1.3743
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": -8.9708
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": -10.1928
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": -10.1929
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": -10.1929
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.24323300021933392,
+          "dense": 8.816386000034981,
+          "rrf_fusion": 0.016152998796314932,
+          "weighted_fusion": 0.02766499892459251,
+          "rerank": 38.860037000631564
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.24323300021933392,
+          "dense": 8.816386000034981,
+          "rrf": 9.07577199905063,
+          "weighted": 9.087283999178908,
+          "rerank": 47.935808999682195
+        },
+        "rank_changes": [
+          {
+            "doc_id": "doc_volcano",
+            "rrf_rank": 9,
+            "rerank_rank": 3,
+            "delta": 6
+          },
+          {
+            "doc_id": "doc_watercycle",
+            "rrf_rank": 7,
+            "rerank_rank": 10,
+            "delta": -3
+          },
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 12,
+            "rerank_rank": null,
+            "delta": null
+          },
+          {
+            "doc_id": "sem_crypto",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "delta": 0
+          },
+          {
+            "doc_id": "sem_gc",
+            "rrf_rank": 11,
+            "rerank_rank": null,
+            "delta": null
+          },
+          {
+            "doc_id": "sem_readable",
+            "rrf_rank": 10,
+            "rerank_rank": 2,
+            "delta": 8
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 3,
+            "rerank_rank": 8,
+            "delta": -5
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 6,
+            "rerank_rank": 9,
+            "delta": -3
+          },
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 8,
+            "rerank_rank": 4,
+            "delta": 4
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 2,
+            "rerank_rank": 7,
+            "delta": -5
+          },
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 5,
+            "rerank_rank": 5,
+            "delta": 0
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 4,
+            "rerank_rank": 6,
+            "delta": -2
+          }
+        ]
+      }
+    },
+    {
+      "query": "植物如何把阳光转化为食物",
+      "expected": [
+        "sem_photo"
+      ],
+      "category": "multilingual",
+      "methods": {
+        "sparse": {
+          "top": [],
+          "recall@k": 0.0,
+          "mrr": 0.0,
+          "ndcg@k": 0.0
+        },
+        "dense": {
+          "top": [
+            {
+              "doc_id": "sem_photo",
+              "score": 0.203
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.1643
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.1263
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.1256
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.1193
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rrf": {
+          "top": [
+            {
+              "doc_id": "sem_photo",
+              "score": 0.0164
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.0161
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.0159
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.0156
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.0154
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "weighted": {
+          "top": [
+            {
+              "doc_id": "sem_photo",
+              "score": 1.0
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.5444
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.0971
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.0891
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.0154
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rerank": {
+          "top": [
+            {
+              "doc_id": "sem_photo",
+              "score": 2.0319
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": -6.7315
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": -10.1939
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": -10.1941
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": -10.1942
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 1018.4950490001938,
+          "dense": 11.234207000597962,
+          "rrf_fusion": 0.011606000043684617,
+          "weighted_fusion": 0.019907000023522414,
+          "rerank": 31.486257999858935
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 1018.4950490001938,
+          "dense": 11.234207000597962,
+          "rrf": 1029.7408620008355,
+          "weighted": 1029.7491630008153,
+          "rerank": 1061.2271200006944
+        },
+        "rank_changes": [
+          {
+            "doc_id": "doc_volcano",
+            "rrf_rank": 2,
+            "rerank_rank": 3,
+            "delta": -1
+          },
+          {
+            "doc_id": "doc_watercycle",
+            "rrf_rank": 3,
+            "rerank_rank": 2,
+            "delta": 1
+          },
+          {
+            "doc_id": "sem_photo",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "delta": 0
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 7,
+            "rerank_rank": 4,
+            "delta": 3
+          },
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 4,
+            "rerank_rank": 6,
+            "delta": -2
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 6,
+            "rerank_rank": 8,
+            "delta": -2
+          },
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 5,
+            "rerank_rank": 5,
+            "delta": 0
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 8,
+            "rerank_rank": 7,
+            "delta": 1
+          }
+        ]
+      }
+    },
+    {
+      "query": "how does water move between the ocean and the sky",
+      "expected": [
+        "doc_watercycle"
+      ],
+      "category": "semantic",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 9.8355
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 2.6283
+            },
+            {
+              "doc_id": "http_400",
+              "score": 1.444
+            },
+            {
+              "doc_id": "http_401",
+              "score": 1.444
+            },
+            {
+              "doc_id": "http_403",
+              "score": 1.444
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "dense": {
+          "top": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.7004
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.183
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.162
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.0651
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.0585
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rrf": {
+          "top": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.0328
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.032
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.0294
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.0161
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.0159
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "weighted": {
+          "top": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 2.0
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.3439
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.2339
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.0594
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.0496
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rerank": {
+          "top": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 5.7936
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": -4.5047
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": -8.4119
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": -10.1931
+            },
+            {
+              "doc_id": "http_401",
+              "score": -10.1937
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.3484190001472598,
+          "dense": 12.854474000050686,
+          "rrf_fusion": 0.01607999911357183,
+          "weighted_fusion": 0.027539999791770242,
+          "rerank": 42.45376899962139
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.3484190001472598,
+          "dense": 12.854474000050686,
+          "rrf": 13.218972999311518,
+          "weighted": 13.230432999989716,
+          "rerank": 55.672741998932906
+        },
+        "rank_changes": [
+          {
+            "doc_id": "doc_volcano",
+            "rrf_rank": 2,
+            "rerank_rank": 2,
+            "delta": 0
+          },
+          {
+            "doc_id": "doc_watercycle",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "delta": 0
+          },
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 5,
+            "rerank_rank": 7,
+            "delta": -2
+          },
+          {
+            "doc_id": "http_401",
+            "rrf_rank": 7,
+            "rerank_rank": 5,
+            "delta": 2
+          },
+          {
+            "doc_id": "http_403",
+            "rrf_rank": 9,
+            "rerank_rank": 6,
+            "delta": 3
+          },
+          {
+            "doc_id": "http_404",
+            "rrf_rank": 11,
+            "rerank_rank": null,
+            "delta": null
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 13,
+            "rerank_rank": null,
+            "delta": null
+          },
+          {
+            "doc_id": "name_alexander_humphrey",
+            "rrf_rank": 3,
+            "rerank_rank": 9,
+            "delta": -6
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 10,
+            "rerank_rank": 8,
+            "delta": 2
+          },
+          {
+            "doc_id": "sem_crypto",
+            "rrf_rank": 6,
+            "rerank_rank": 10,
+            "delta": -4
+          },
+          {
+            "doc_id": "sem_gc",
+            "rrf_rank": 8,
+            "rerank_rank": 4,
+            "delta": 4
+          },
+          {
+            "doc_id": "sem_photo",
+            "rrf_rank": 4,
+            "rerank_rank": 3,
+            "delta": 1
+          },
+          {
+            "doc_id": "sem_readable",
+            "rrf_rank": 12,
+            "rerank_rank": null,
+            "delta": null
+          }
+        ]
+      }
+    },
+    {
+      "query": "how are volcanoes formed from molten rock",
+      "expected": [
+        "doc_volcano"
+      ],
+      "category": "semantic",
+      "methods": {
+        "sparse": {
+          "top": [
+            {
+              "doc_id": "doc_volcano",
+              "score": 3.4557
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 2.7155
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 2.0863
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "dense": {
+          "top": [
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.7515
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.2896
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.0735
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.0224
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.0215
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rrf": {
+          "top": [
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.0328
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.0323
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.0159
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.0159
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.0156
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "weighted": {
+          "top": [
+            {
+              "doc_id": "doc_volcano",
+              "score": 2.0
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.8291
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.0746
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.0049
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.0035
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        },
+        "rerank": {
+          "top": [
+            {
+              "doc_id": "doc_volcano",
+              "score": 4.955
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": -6.5633
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": -10.1936
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": -10.1938
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": -10.1938
+            }
+          ],
+          "recall@k": 1.0,
+          "mrr": 1.0,
+          "ndcg@k": 1.0
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.2501049984857673,
+          "dense": 8.402363999266527,
+          "rrf_fusion": 0.01324400000157766,
+          "weighted_fusion": 0.02330699862795882,
+          "rerank": 38.46608899948478
+        },
+        "end_to_end_latency_ms": {
+          "sparse": 0.2501049984857673,
+          "dense": 8.402363999266527,
+          "rrf": 8.665712997753872,
+          "weighted": 8.675775996380253,
+          "rerank": 47.131801997238654
+        },
+        "rank_changes": [
+          {
+            "doc_id": "doc_volcano",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "delta": 0
+          },
+          {
+            "doc_id": "doc_watercycle",
+            "rrf_rank": 2,
+            "rerank_rank": 2,
+            "delta": 0
+          },
+          {
+            "doc_id": "sem_gc",
+            "rrf_rank": 4,
+            "rerank_rank": 3,
+            "delta": 1
+          },
+          {
+            "doc_id": "sem_photo",
+            "rrf_rank": 3,
+            "rerank_rank": 9,
+            "delta": -6
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 9,
+            "rerank_rank": 5,
+            "delta": 4
+          },
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 5,
+            "rerank_rank": 6,
+            "delta": -1
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 6,
+            "rerank_rank": 7,
+            "delta": -1
+          },
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 8,
+            "rerank_rank": 8,
+            "delta": 0
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 7,
+            "rerank_rank": 4,
+            "delta": 3
+          }
+        ]
+      }
+    }
+  ],
+  "elapsed_sec": 0.65,
+  "eval_k": 3
+}

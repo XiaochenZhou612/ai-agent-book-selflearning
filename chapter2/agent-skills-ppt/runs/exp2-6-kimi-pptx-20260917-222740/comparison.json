@@ -1,0 +1,68 @@
+{
+  "experiment_id": "2-6",
+  "runtime": "kimi",
+  "protocol_sha256": "3a6451376233d1185bef7e1daff7c006c4dabc732ee910388053467895dfe594",
+  "official_skill_receipt": {
+    "repository": "https://github.com/anthropics/skills.git",
+    "revision": "69c0b1a0674149f27b61b2635f935524b6add202",
+    "skill_path": "D:\\Elena_Zhou\\Documents\\ai agent\\chapter2\\agent-skills-ppt\\external\\anthropics-skills\\skills\\pptx",
+    "required_file_hashes": {
+      "skills\\pptx\\SKILL.md": "5b282b8989c7aee4d1b1d64092f78228b3a98ff981de0c57843c8b6e9f249979",
+      "skills\\pptx\\html2pptx.md": "ddcfb3c719489236e2b14d0816c93460d1aa60bee5797fb117315b895465fa52",
+      "skills\\pptx\\scripts\\html2pptx.js": "cfb023e8c17a74a35158126f2733d0a2aaa7b7f291e269b2f1828b449dd4f398",
+      "skills\\pptx\\scripts\\thumbnail.py": "621bfaea29326ee99e450563cdba69e7ef24b4547e4cc87960f48dfdb9e749a4"
+    }
+  },
+  "agent_result": {
+    "return_code": 1,
+    "model_alias": "kimi-code/k3",
+    "num_assistant_messages": 0,
+    "num_tool_calls": 0,
+    "tool_names": [],
+    "session_id": null,
+    "final_response": null
+  },
+  "slide_count": 0,
+  "section_checks": {
+    "title": false,
+    "background": false,
+    "method": false,
+    "results": false,
+    "conclusion": false
+  },
+  "source_visuals": [],
+  "embedded_media": {},
+  "thumbnail_files": [],
+  "gates": {
+    "source_pdf_hash_matches": true,
+    "kimi_run_succeeded": false,
+    "pptx_skill_invoked": false,
+    "skill_md_loaded": false,
+    "html2pptx_guide_loaded": false,
+    "official_html2pptx_used": false,
+    "official_thumbnail_used": false,
+    "thumbnail_visually_inspected": false,
+    "pptx_zip_valid": false,
+    "pptx_reopens": false,
+    "slide_count_in_range": false,
+    "required_sections_present": false,
+    "three_source_visuals_embedded_and_documented": false,
+    "thumbnail_grid_present": false,
+    "credential_scan_passed": true
+  },
+  "official_complete": false,
+  "artifacts": {
+    "experiment_protocol.json": {
+      "sha256": "3a6451376233d1185bef7e1daff7c006c4dabc732ee910388053467895dfe594",
+      "bytes": 3774
+    },
+    "kimi_stream.jsonl": {
+      "sha256": "8d34c4b7d6c770a97847d8a00f5b75f167c79d50a19781f32fbd76524afa060c",
+      "bytes": 59
+    },
+    "workspace\\attention-is-all-you-need.pdf": {
+      "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+      "bytes": 2215244
+    }
+  }
+}

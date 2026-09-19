@@ -1,0 +1,8 @@
+{
+  "experiment_id": "2-6",
+  "runtime": "kimi",
+  "official_complete": false,
+  "protocol_sha256": "3a6451376233d1185bef7e1daff7c006c4dabc732ee910388053467895dfe594",
+  "comparison_sha256": "f7d9b2b6941006167543699a8b41f16f2a3a031e6f52a86f34df9ff23e4e7e49",
+  "pptx_sha256": null
+}
