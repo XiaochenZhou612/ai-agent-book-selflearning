@@ -35,6 +35,8 @@ import argparse
 import asyncio
 import json
 import os
+import shlex
+import subprocess
 import sys
 import tempfile
 import textwrap
@@ -267,8 +269,19 @@ def cmd_demo(args: argparse.Namespace) -> int:
 
         # 5. virtual_terminal：用 shell 校验数据文件
         section("5. virtual_terminal：用 shell 校验数据文件")
+        if os.name == "nt":
+            count_code = (
+                "from pathlib import Path; import sys; "
+                "print(len(Path(sys.argv[1]).read_text(encoding='utf-8').split())); "
+                "print('--- 词数统计完成 ---')"
+            )
+            command = subprocess.list2cmdline([
+                sys.executable, "-c", count_code, os.path.join(workspace, "data.txt")
+            ])
+        else:
+            command = f"wc -w {shlex.quote(os.path.join(workspace, 'data.txt'))} && echo '--- 词数统计完成 ---'"
         r = await exec_tools.virtual_terminal(
-            command=f"wc -w {workspace}/data.txt && echo '--- 词数统计完成 ---'"
+            command=command
         )
         print(f"结果：success={r['success']}, returncode={r.get('returncode')}")
         print("stdout:")

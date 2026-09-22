@@ -1,0 +1,89 @@
+================================================================================
+MULTIMODAL AGENT DEMO
+================================================================================
+
+================================================================================
+COMPARING EXTRACTION MODES
+File: .\test_files\sample_chart.png
+Query: Which quarter had the highest revenue, and what was the exact value?
+================================================================================
+
+
+------------------------------------------------------------
+1. NATIVE MULTIMODAL MODE (doubao-1.6)
+------------------------------------------------------------
+Looking at the bar chart, Q4 has the tallest bar, labeled **$180M**, which is higher than Q1 ($120M), Q2 ($150M), and Q3 ($95M).
+
+**Q4** had the highest revenue, with an exact value of **$180 million**.
+
+------------------------------------------------------------
+2. EXTRACT TO TEXT MODE
+------------------------------------------------------------
+Extracting content to text...
+
+Extracted text:
+This is a clean, flat-style vertical categorical bar chart displaying 2024 quarterly revenue for the fictional company Acme Corp:
+---
+### Header and Chart Framework
+1.  **Title**: Centered at the top in large, bold, black sans-serif text is the title: *Acme Corp Quarterly Revenue 2024*.
+2.  **Vertical (Y) Axis**:
+    *   The axis runs along the left edge, with a label rotated 90 degrees to read vertically: *Revenue (in $M)*, indicating values are measured in millions of U.S. dollars.
+    *   The linear scale starts at `0` at the horizontal axis baseline, and increments in 25-million-dollar steps up to `200` at the top of the plot. Labeled tick marks appear at values: 0, 25, 50, 75, 100, 125, 150, 175, 200.
+    *   Faint, light gray dashed horizontal grid lines extend across the plain white plot background at every tick mark. The entire plot area is framed by a solid black border.
+3.  **Horizontal (X) Axis**:
+    *   This is the categorical axis, with one position for each calendar quarter of 2024. Labels centered below each position, in black sans-serif text, read left to right: `Q1`, `Q2`, `Q3`, `Q4`.
+---
+### Bars and Annotated Values
+There are four evenly spaced, solid-color vertical bars (with no gradients, patterns, or 3D effects), one per quarter. Every bar has its exact revenue value printed in large bold black text centered directly above it; no separate legend is required. From left to right:
+1.  **Q1 (First Quarter)**: The bar is filled solid medium slate blue. It reaches a height of 120, sitting 5 units below the 125 grid line. The annotation above it reads **$120M**, representing $120 million in revenue.
+2.  **Q2 (Second Quarter)**: The bar is filled solid medium grass green. Its top edge aligns exactly with the 150 grid line. The annotation above it reads **$150M**, representing $150 million in revenue: a $30 million increase from Q1.
+3.  **Q3 (Third Quarter)**: The bar is filled solid muted brick red/deep rose, and is the shortest bar on the chart. It reaches a height of 95, sitting 5 units below the 100 grid line. The annotation above it reads **$95M**, representing $95 million: this is the lowest-revenue quarter of the year, a $55 million decline from Q2.
+4.  **Q4 (Fourth Quarter)**: The bar is filled solid muted dusty purple, and is the tallest bar on the chart. It reaches a height of 180, sitting 5 units above the 175 grid line. The annotation above it reads **$180M**, representing $180 million: this is the highest-revenue quarter of the year, an $85 million jump from Q3.
+---
+### Additional Context
+*   The four distinct bar colors only serve to visually separate quarters; they do not encode an additional metric.
+*   The 2024 revenue trend shown is: growth from Q1 to Q2, a sharp mid-year dip in Q3, then very strong growth to the annual peak in Q4. Summed across all four quarters, Acme Corp's total 2024 revenue shown is $545 million.
+*   The y-axis starts at 0 (standard best practice for bar charts), and the minimal, high-contrast design is formatted for business reporting readability. No footnotes, data source labels, or extra data series appear on the chart.
+
+Answering query with extracted text...
+### Solution Steps
+
+- Compare the quarterly revenues: Q1 = $120M, Q2 = $150M, Q3 = $95M, Q4 = $180M.
+- The largest value is **$180M**, recorded in **Q4**.
+
+### Final Answer
+
+**Q4 had the highest revenue, at exactly $180 million.**
+
+------------------------------------------------------------
+3. EXTRACT TO TEXT + MULTIMODAL TOOLS
+------------------------------------------------------------
+Using extract-to-text with tools enabled for follow-up questions...
+Extracted 1576 characters
+Based on the bar chart, **Q4 had the highest revenue**, with an exact value of **$180 million ($180M)**.
+
+Follow-up question: What colors are dominant in the image at .\test_files\sample_chart.png?
+
+[Tool: analyze_image]
+### Main color palette:
+1.  **Background**: The large base/plot and figure background is plain, bright clean **white**.
+2.  **Bar colors**: The four bars use flat, muted/desaturated distinct colors:
+    - Q1: Soft medium slate blue
+    - Q2: Muted medium forest green
+    - Q3: Dusty brick/ dark rose red
+    - Q4: Muted dusty violet-purple
+3.  **Text & axis frame**: *All text* (the bold top title, y-axis label, quarter labels, axis number ticks, and bold revenue labels above bars) is solid **black**. The outer chart border/axis spines are also solid black.
+4.  **Gridlines**: The horizontal-only grid lines are faint, pale **light gray**, rendered as soft dashed lines against the white background.
+Based on the image analysis, the dominant colors in the chart are:
+
+1. **White** — the background of the figure and plotting area, making up most of the image.
+2. **Black** — used for the title, all axis labels, tick marks, revenue values above the bars, and the chart border.
+3. **Light gray** — used for the faint dashed horizontal gridlines.
+
+The four bars themselves use distinct, muted colors:
+- **Q1:** Slate blue
+- **Q2:** Forest green
+- **Q3:** Brick/dusty red
+- **Q4:** Violet-purple
+
+Overall, **white and black** are the most dominant colors due to the background and all text/axes, with the four bar colors (blue, green, red, and purple) serving as the primary color accents.

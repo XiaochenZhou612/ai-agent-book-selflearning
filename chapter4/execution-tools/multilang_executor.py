@@ -5,6 +5,7 @@ import subprocess
 import tempfile
 import os
 import shutil
+import sys
 import time
 import base64
 import psutil
@@ -153,13 +154,21 @@ class LanguageExecutor:
         try:
             logger.debug(f'Running command: {command[:100]}...')
             
+            process_kwargs = {
+                "stdin": asyncio.subprocess.PIPE if stdin else None,
+                "stdout": asyncio.subprocess.PIPE,
+                "stderr": asyncio.subprocess.PIPE,
+                "cwd": cwd,
+            }
+            # Windows has no /bin/bash. Let asyncio use COMSPEC there; keep
+            # Bash explicitly selected on POSIX because several language
+            # runners rely on its shell syntax.
+            if os.name != "nt":
+                process_kwargs["executable"] = "/bin/bash"
+
             process = await asyncio.create_subprocess_shell(
                 command,
-                stdin=asyncio.subprocess.PIPE if stdin else None,
-                stdout=asyncio.subprocess.PIPE,
-                stderr=asyncio.subprocess.PIPE,
-                cwd=cwd,
-                executable='/bin/bash'
+                **process_kwargs,
             )
             
             # Write stdin if provided
@@ -280,7 +289,7 @@ class LanguageExecutor:
             # Run untrusted Python in a real container boundary when Docker is
             # available: no network, read-only rootfs, bounded memory/CPU/PIDs,
             # and only the one ephemeral work directory mounted writable.
-            if shutil.which("docker"):
+            if shutil.which("docker") and os.name != "nt":
                 mount = shlex.quote(f"{tmp_dir}:/workspace:rw")
                 command = (
                     "docker run --rm --network none --memory 256m --cpus 1 "
@@ -300,8 +309,11 @@ class LanguageExecutor:
                     "pids_limit": 64,
                 }
             else:
+                python_command = subprocess.list2cmdline([
+                    sys.executable, "-I", "-B", "-u", code_file
+                ])
                 result = await self._run_command(
-                    f'python3 -I -B -u {shlex.quote(code_file)}',
+                    python_command,
                     timeout,
                     stdin,
                     tmp_dir

@@ -1,0 +1,109 @@
+================================================================================
+MULTIMODAL AGENT DEMO
+================================================================================
+
+================================================================================
+COMPARING EXTRACTION MODES
+File: .\test_files\sample_chart.png
+Query: Which quarter had the lowest revenue, what was its value, and by how much did Q4 exceed it?
+================================================================================
+
+
+------------------------------------------------------------
+1. NATIVE MULTIMODAL MODE (doubao-1.6)
+------------------------------------------------------------
+Looking at the chart:
+
+- **Q1:** $120M
+- **Q2:** $150M
+- **Q3:** $95M
+- **Q4:** $180M
+
+**Q3** had the lowest revenue at **$95M**.
+
+Q4 exceeded Q3 by: **$180M − $95M = $85M**.
+
+------------------------------------------------------------
+2. EXTRACT TO TEXT MODE
+------------------------------------------------------------
+Extracting content to text...
+
+Extracted text:
+This is a clean, presentation-style **vertical bar chart** on a white background, displaying 2024 quarterly revenue for the fictional Acme Corporation:
+---
+### Header & Axes
+1.  **Title:** Centered at the top in large, bold black sans-serif text: *Acme Corp Quarterly Revenue 2024*
+2.  **Vertical (Y) Axis:**
+    *   Labeled vertically along the left edge: *Revenue (in $M)*, meaning values are reported in millions of U.S. dollars.
+    *   The linear scale runs from `0` at the bottom to `200` at the top, with labeled tick marks at 25-unit increments: `0, 25, 50, 75, 100, 125, 150, 175, 200`.
+    *   Faint, light gray dashed horizontal grid lines extend across the plot area at every tick mark, rendered behind the bars. The full plot area is outlined with a solid black border.
+3.  **Horizontal (X) Axis:**
+    *   This is a category axis, with four labels centered beneath each bar for the calendar quarters of 2024: `Q1`, `Q2`, `Q3`, `Q4`.
+---
+### Individual Bars & Data
+All bars are equal width, evenly spaced, and use a flat solid muted color fill with no outlines. A bold black value label is centered directly above the top of every bar:
+1.  **Q1 (First Quarter):** The bar is muted steel blue, reaches a height of 120 (just below the 125 grid line), and is labeled **$120M** = $120 million in revenue.
+2.  **Q2 (Second Quarter):** The bar is muted medium forest green, reaches exactly to the 150 grid line, and is labeled **$150M** = $150 million in revenue (a $30 million increase from Q1).
+3.  **Q3 (Third Quarter):** The bar is muted brick/dusty red, reaches 95 (just below the 100 grid line), and is labeled **$95M** = $95 million in revenue. This is the *lowest revenue quarter of the year*, a $55 million decline from Q2.
+4.  **Q4 (Fourth Quarter):** The bar is muted dusty purple, is the tallest bar on the chart, reaches 180 (5 units above the 175 grid line), and is labeled **$180M** = $180 million in revenue. This is the *highest revenue quarter of the year*, an $85 million jump from Q3.
+---
+### Additional Context
+*   No legend is required, as every bar maps directly to the labeled quarter on the horizontal axis.
+*   Total reported full-year 2024 revenue for Acme Corp sums to **$545 million**.
+*   The annual trend shows growth Q1→Q2, a sharp contraction in Q3, then a strong rebound to an annual peak in Q4.
+
+Answering query with extracted text...
+### Solution Steps
+
+1. The lowest bar corresponds to **Q3**, with revenue of **$95M**.
+2. Q4 revenue was **$180M**.
+3. Difference: **$180M − $95M = $85M**.
+
+### Final Answer
+
+**Q3 had the lowest revenue at $95 million, and Q4 exceeded it by $85 million.**
+
+------------------------------------------------------------
+3. EXTRACT TO TEXT + MULTIMODAL TOOLS
+------------------------------------------------------------
+Using extract-to-text with tools enabled for follow-up questions...
+Extracted 2667 characters
+## Solution Steps
+
+1. Identify the lowest revenue: **Q3** at **$95 million**.
+2. Q4 revenue was **$180 million**.
+3. Calculate the difference:  
+   \[
+   180 - 95 = 85
+   \]
+
+## Final Answer
+
+**Q3 had the lowest revenue at $95 million. Q4 exceeded Q3 by $85 million.**
+
+Follow-up question: What colors are dominant in the image at .\test_files\sample_chart.png?
+
+[Tool: analyze_image]
+The dominant colors in this bar chart are:
+1.  **White**, which makes up the full chart/plot background (the largest area of the image)
+2.  **Black**, used for all text (title, labels, values), axis lines, and the chart border
+3.  Four distinct solid colors for the quarterly bars (the main saturated colored elements):
+    - Muted medium slate blue (Q1)
+    - Medium grass/forest green (Q2)
+    - Muted dark brick/crimson red (Q3)
+    - Soft dusty purple (Q4)
+
+Very faint light gray is used for the dashed horizontal grid lines, but it is subtle and not a prominent saturated color.
+## Dominant Colors
+
+The dominant colors in the chart are:
+
+1. **White** — the largest area, forming the plot/chart background.
+2. **Black** — used for the title, axis labels, value annotations, axis lines, and the chart border.
+3. **Four solid bar colors** (the main saturated elements):
+   - **Blue** (slate blue) — Q1
+   - **Green** (medium/grass green) — Q2
+   - **Red** (dark brick/crimson red) — Q3
+   - **Purple** (dusty purple) — Q4
+
+A faint **light gray** also appears in the dashed horizontal grid lines, though it is subtle rather than prominent. Overall, **white and black** dominate the visual space, with the **blue, green, red, and purple bars** providing the primary color accents.
