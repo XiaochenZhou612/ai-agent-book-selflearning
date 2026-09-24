@@ -1,0 +1,13 @@
+{
+  "user_id": "demo_user",
+  "updated_at": "2026-09-18T13:08:35.614175",
+  "conversations": [
+    {
+      "session_id": "session-afd58595",
+      "user_message": "What do you know about me and my work?",
+      "assistant_message": "Honestly? Nothing yet! I don't have any notes or memories from previous conversations with you, so I'm starting with a clean slate.\n\nI'd love to learn more about you and your work, though. If you'd like personalized help, feel free to share things like:\n\n- **Your role or profession** — what do you do day-to-day?\n- **Current projects** — what are you working on right now?\n- **Goals or challenges** — what are you trying to accomplish or solve?\n- **Preferences** — how do you like to work, communicate, or receive information?\n\nThe more context you give me, the better I can tailor my responses to actually be useful for your specific situation. So — what do you do, and what can I help you with?",
+      "timestamp": "2026-09-18T13:08:35.605948",
+      "turn_number": 1
+    }
+  ]
+}
